@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+  <!--© Vince Vagay 30036567-->
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Homepage</title>
+  <link rel="stylesheet" href="mystyle.css" type="text/css">
+</head>
+
+<!--Header contains logo and title-->
+<iframe src="background.html" style="padding-left: 0.05vw; border-color: #00000000;"></iframe>
+<header id="header" class="header">
+    <!--For title of page-->
+    <div>
+        <img class="head-img"src="images/ODSlogo.png" alt="HeaderLogo"/>
+    </div>
+    <div>
+      <h1 style="margin-top: -6vw; padding-bottom: 2.5vw; text-shadow: 2px 3px #0b0b0bbb;">Orbital Dynamic Solutions</h1> 
+    </div>
+</header>
+<!--Header ends here-->
+<!--Body starts here-->
+<body>
+</div> 
+<!--Navigation starts here-->
+<div class="nav" id="nav">
+    <span>
+    <div style="text-align: center;">
+      <nav class="navbar">
+        <div class="hamburger-menu">
+            <div class="bar"></div>
+            <div class="bar"></div>
+            <div class="bar"></div>
+        </div>
+      <ul class="nav-links">
+        <li><a class="non" href="index.html" style="color: white;">Homepage</a> </li>
+        <li><a class="non" href="scope.html" style="color: white;">Project Scope</a> </li>
+        <li><a class="non" href="competition.html" style="color: white;">Competition</a> </li>
+        <li><a class="non" href="objectives.html" style="color: white;">Objectives</a> </li>
+        <li><a class="non" href="diagrams.html" style="color: white;">Diagrams</a> </li>
+        <li><a class="non" href="contactus.html" style="color: white;">Contact Us</a> </li>
+        <li><a class="non" href="partners.html" style="color: white;">Partners</a> </li>
+      </ul>
+    </div>
+    </span>
+</div>
+<!--Js to make nav scroll with page-->
+<!--Js toggle hamburger menu visibility-->
+<script>
+  window.onscroll = function() {myFunction()};
+  
+  var nav = document.getElementById("nav");
+  var sticky = nav.offsetTop;
+  
+  function myFunction() {
+    if (window.pageYOffset > sticky) {
+      nav.classList.add("sticky");
+    } else {
+      nav.classList.remove("sticky");
+    }
+  }
+
+  document.addEventListener('DOMContentLoaded', function() {
+    const hamburgerMenu = document.querySelector('.hamburger-menu');
+    const navLinks = document.querySelector('.nav-links');
+
+    hamburgerMenu.addEventListener('click', function() {
+        navLinks.classList.toggle('active');
+    });
+});
+</script>
+
+<!--Navigation ends here-->
+
+<!--Start of flexboxes to divide webpage-->
+<div class="flexbox" style="text-align: center;">
+    <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+    <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+</div>
+<!--Each section follows the same uniformity: image on left, heading on right, text on Right below heading-->
+<div class="flexbox" style="text-align: center;">
+</div>
+</body>
+<!--Body ends here-->
+<!--Link to scroll you back to top of page-->
+<div style="text-align: center;">
+<!--Footer that travels with you at the bottom of page-->
+<footer>
+     <!-- Company Logo -->
+    <span style="float: left; margin-left:1vw;">
+        <img  class="footer-img" src="images/ODSlogo.png" alt="HeaderLogo"/>
+    </span>
+    <!-- Links column on the left -->
+    <div>
+        <ul class="footer-links">
+            <li><a href="references.html">References</a></li>
+            <li><a href="contactus.html">Contact Us</a></li>
+            <li><a href="scope.html">About Us</a></li>
+        </ul>
+    </div>
+    <!-- Links user back to the top of the page using the header -->
+    <div>
+        <a href="#header" style="color: #F8FDFC; font-size: 1vw; margin-left: -21vw;">Back to top</a>
+    </div>
+    <!-- Copyright on the right -->
+    <div style="display: flex; align-items: center; justify-content: flex-end;">
+        <span>© Vince Vagay | 2025</span>
+    </div>
+</footer>
+
+</html>

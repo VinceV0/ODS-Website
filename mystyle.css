@@ -1,0 +1,313 @@
+/* Rubik */
+@import url('https://fonts.googleapis.com/css2?family=Kaushan+Script&family=Roboto:wght@300&family=Rubik&family=Source+Sans+Pro&display=swap');
+/* Orbitron */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Orbitron:wght@400..900&display=swap');
+/* Zalando Sans */
+@import url('https://fonts.googleapis.com/css2?family=Zalando+Sans:ital,wght@0,200..900;1,200..900&display=swap');
+
+/*Smooth scrolling*/
+html {
+    scroll-behavior: smooth;
+}
+
+/* Header image containing the company logo */
+.head-img{
+    pointer-events: none;
+    height: 7.5vw; 
+    transform: translateX(18vw);
+    margin-top: 2vw;
+}
+
+/* Body image as a Starry Night Sky */
+body{
+    background-color: #000000;
+    font-family: "Open Sans", sans-serif;
+    background-image: url(images/StarrySky.png);
+    background-size: cover;
+    overflow-x: hidden;
+}
+
+/*This header is on top of the 360 image*/
+.header{
+    margin-top: -12.5vw;
+    margin-bottom: -2vw;
+}
+
+h1{
+    text-align: center;
+    font-family: "Zalando Sans", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 500;
+    font-style: normal;
+    font-variation-settings: "wdth" 100;
+    font-size: 3.5vw; 
+    color: #F8FDFC;
+    pointer-events: none;
+}
+
+h2{
+    text-align: center;
+    font-size: 5vw;
+    padding-top: 1%;
+    margin-top: 1px;
+    margin-bottom: 5px;
+    font-family: "Open Sans", sans-serif;
+}
+
+h3{
+    padding-left: 2%;
+    text-align: left;
+    font-size: 2.5vw;
+    margin-top: 1px;
+    margin-bottom: -3px;
+    font-family: "Open Sans", sans-serif;
+}
+
+p{
+    padding-left: 2%;
+    padding-right: 10%;
+    text-align: left;
+    font-size: 1.5vw;
+    margin-top: 1%;
+    margin-bottom: 1%;
+    font-family: "Open Sans", sans-serif;
+}
+
+/*Flexboxes are used to divide the whole page, rounded corners*/
+.flexbox {
+    display: flex;
+    flex-wrap: wrap;
+    background: #0E3D67;
+    border-radius: 10px 10px 10px 10px;
+    height: 100%;
+    width: 80%;
+    margin-left: 10%;
+    margin-top: -0.3vw;
+    text-align: center;
+    z-index: 2;
+}
+
+/*Divisions in flexboxes have chosen elements*/
+.flexbox > div {
+    flex-wrap: wrap;
+    background-color: #F8FDFC;
+    width: 100%;
+    height: 100%;
+    margin: 4%;
+    text-align: left;
+    font-size: 120%;
+    border-radius: 10px 10px 10px 10px;
+    flex-wrap: wrap;
+    display: flow-root;
+    font-family: 'Rubik', sans-serif;
+}
+
+/*Images in flexboxes are always on the left and have a background color of #F8FDFC, incase the image is broken*/
+.flexbox > img {
+    float: left;
+    max-height: 100%;
+    min-width: 100%;
+    vertical-align: bottom;
+    background-color: #F8FDFC;
+}
+
+/*Nav bar*/
+.nav { 
+    font-family: "Montserrat", sans-serif;
+    font-weight: 200;
+    margin-bottom: 1vw;
+    margin-left: -1vw;
+    position:relative;
+    background: #000000;
+    background: linear-gradient(0deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 1) 10%);
+    background-image: url(images/StarrySky.png);
+    width: 101.64%;
+    text-align: center;
+    text-shadow: 1px 1px 2px black;
+    z-index: 100;
+    font-size:1.5vw; 
+    padding-bottom: 1vw;
+    padding-top: 1vw;
+    box-shadow: 0 -10px 10px rgb(0, 0, 0);
+    background-size: cover;
+    overflow-x: hidden;
+}
+
+/* Navigation bar links */
+.nav-links {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+}
+
+/* Spacing of links */
+.nav-links li {
+    padding: 0 1vw;
+}
+
+/* On hover rectangle shows */
+ul li a:hover {
+    background-color: #1111113e;
+    background: linear-gradient(0deg, rgba(0, 0, 0, 0.565) 50%, rgba(0, 0, 0, 1) 10%);
+    text-decoration: underline;
+}
+
+/*Makes nav bar stick to top on scroll*/
+/* Makes the nav bar half transparent */
+.sticky {
+    position: fixed;
+    top: 0;
+    margin-left: -1.6vw;
+    background-image: none;
+    background-color: #000000;
+    background: linear-gradient(0deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 1) 95%);
+}
+
+/*Footer is given colour and is fixed to the bottom of the page*/
+footer {
+    font-family: "Montserrat", sans-serif;
+    font-weight: 200;
+    padding-left: 1vw;
+    padding-top: 2.5vw;
+    padding-bottom: 2vw;
+    padding-right: 1vw;
+    margin-bottom: -1.1vw;
+    margin-left: -1vw;
+    height: 3vw;
+    width: 99.4%;
+    background-color: #000000;
+    background: linear-gradient(0deg,rgba(0, 0, 0, 1) 65%, rgba(0, 0, 0, 0) 100%);
+    color: #F8FDFC;
+    font-size: 1vw;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* Put links in a column */
+.footer-links {
+    display: flex;
+    flex-direction: column;
+    list-style: none;
+    padding-top: 5vw;
+    margin-left: -50vw;
+}
+
+/* Spacing of links */
+.footer-links li {
+    margin: -1.5vw 0;
+}
+
+/* Text properties */
+.footer-links a {
+    color: #F8FDFC;
+    text-decoration: none;
+    font-size: 0.7vw;
+}
+
+/* Underline on hover */
+.footer-links a:hover {
+    text-decoration: underline;
+    background-color: rgba(0, 0, 0, 0)
+}
+
+.footer-img{
+    height: 4vw;
+    padding-left:1vw;
+    margin-left: -1vw;
+    margin-top: 0.5vw;
+}
+
+/*Header 360 Image JavaScript*/
+iframe{
+    zoom:1.2;
+    z-index: 1;
+    margin-left:-12px;
+    margin-top:-10px;
+    width: 83vw;
+    /* width: 101.45%; */
+    height: 10.1vw;
+}
+
+ /*Clear any styling*/
+.non{
+    all: unset
+}
+
+/* Hamburger menu properties */
+.hamburger-menu {
+    display: none;
+    cursor: pointer;
+    z-index: 1000;
+    color: white;
+    font-size: 5vh;
+    background-color: #000000;
+    background:  #000000;
+    margin-left: -2vw;
+    padding: 1vw;
+    padding-left: 5vw;
+    padding-top: 1vh;
+    margin-top: -2vw;
+    width: 95%;
+    height: 5vw;
+    top: 0.4vw;
+}
+
+/* White bars for icon */
+.hamburger-menu .bar {
+    width: 3vh;
+    height: 0.2vh;
+    background-color: rgb(255, 255, 255);
+    margin: 4px 0;
+}
+
+/*Website adjustment for small screens*/
+@media (max-width: 1200px) {
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        background-color: #00000090;
+        position: absolute;
+        top: 2.5vw;
+        left: 0;
+        width: 100%;
+        text-align: center;
+        font-size: 2vw;
+    }
+
+    .nav{
+        background-color: #00000000;
+        overflow-x:unset;
+    }
+    
+    .nav-links.active {
+        display: flex;
+    }
+
+    .nav-links li {
+        padding: 15px 0;
+    }
+
+    .hamburger-menu {
+        display: block;
+        position: absolute;
+        left: 10px;
+        padding-top: 1.1vw;
+        height: 2vw;
+        background: linear-gradient(0deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 1) 70%);
+    }
+
+    .header{
+        margin-top: -12.5vw;
+        padding-bottom: 4vh;
+        margin-bottom: -5.5vh;
+    }
+
+    .sticky {
+        position: fixed;
+        top: 1.3vw;
+        margin-left: -1.7vw;
+    }
+}
