@@ -23,16 +23,17 @@ body{
     background-color: #000000;
     font-family: "Open Sans", sans-serif;
     background-image: url(images/StarrySky.png);
-    background-size: cover;
+    background-size:initial;
     overflow-x: hidden;
 }
 
-/*This header is on top of the 360 image*/
+/*This header is on top of the 360 image, defines positioning*/
 .header{
     margin-top: -12.5vw;
     margin-bottom: -2vw;
 }
 
+/* Heading 1 */
 h1{
     text-align: center;
     font-family: "Zalando Sans", sans-serif;
@@ -41,66 +42,121 @@ h1{
     font-style: normal;
     font-variation-settings: "wdth" 100;
     font-size: 3.5vw; 
-    color: #F8FDFC;
+    color: #ffffff;
     pointer-events: none;
 }
 
+/* Heading 2 */
 h2{
     text-align: center;
-    font-size: 5vw;
-    padding-top: 1%;
-    margin-top: 1px;
+    font-size: 2.5vw;
+    padding-top: 2%;
+    margin-top: 2vw;
     margin-bottom: 5px;
-    font-family: "Open Sans", sans-serif;
+    font-family: "Zalando Sans", sans-serif;
+    color: #F8FDFC;
+    font-optical-sizing: auto;
+    font-weight: 500;
+    margin-left: 3vw;
+    
+    text-shadow: 2px 5px 10px black;
 }
 
+/* Heading 3 */
 h3{
-    padding-left: 2%;
+    padding-left: 4%;
     text-align: left;
     font-size: 2.5vw;
     margin-top: 1px;
     margin-bottom: -3px;
-    font-family: "Open Sans", sans-serif;
+    font-family: "Zalando Sans", sans-serif;
+    font-weight: 350;
+    color: #F8FDFC;
+    padding-top: 2.5vw;
+    text-decoration-thickness: 0.05em;
+    text-shadow: 2px 5px 5px black;
 }
 
+/* Heading 4 */
+h4{
+    text-shadow: 0px 5px 15px black;
+}
+
+/* Heading 5 */
+h5{
+    margin-left: -20vw;
+    margin-top: -1vw;
+    padding: 2vw;
+    margin-bottom: 0vw;
+    font-size: 2vw;
+    font-weight: 1;
+    max-width: 75vw;
+    color: white;
+    text-decoration: underline;
+}
+
+/* Heading 6 */
+h6{
+    margin-top: -5vw;
+    padding-top: 4vw;
+    padding-bottom: 1vw;
+    margin-bottom: 2vw;
+    font-size: 1.8vw;
+    font-weight: 1;
+    max-width: 75vw;
+    color: white;
+}
+
+
+/* Text in a list within the flexbox */
+.flexbox ul li{
+    color: white;
+    margin-left: -8.5vw;
+    margin-top: -2vw;
+    font-size: 1.15vw;
+}
+
+/* paragraphs */
 p{
     padding-left: 2%;
     padding-right: 10%;
     text-align: left;
-    font-size: 1.5vw;
-    margin-top: 1%;
+    font-size: 1.2vw;
+    margin-top: 1vw;
     margin-bottom: 1%;
-    font-family: "Open Sans", sans-serif;
+    font-family: "Zalando Sans", sans-serif;
+    color: #F8FDFC;
+    text-shadow: 2px 2px 5px black;
 }
 
 /*Flexboxes are used to divide the whole page, rounded corners*/
 .flexbox {
     display: flex;
     flex-wrap: wrap;
-    background: #0E3D67;
-    border-radius: 10px 10px 10px 10px;
+    background: #1919195d;
     height: 100%;
     width: 80%;
     margin-left: 10%;
     margin-top: -0.3vw;
     text-align: center;
     z-index: 2;
+    /* outline: 2px solid rgb(0, 0, 0); */
+}
+
+/* Centering items within the flexbox */
+.flexbox .centre{
+    flex-wrap: wrap;
+    background-color: #00000000;
+    width: 100%;
+    height: 100%;
+    margin-top: -6vw;
+    text-align: left;
 }
 
 /*Divisions in flexboxes have chosen elements*/
-.flexbox > div {
-    flex-wrap: wrap;
-    background-color: #F8FDFC;
-    width: 100%;
-    height: 100%;
-    margin: 4%;
-    text-align: left;
-    font-size: 120%;
-    border-radius: 10px 10px 10px 10px;
-    flex-wrap: wrap;
-    display: flow-root;
-    font-family: 'Rubik', sans-serif;
-}
+/* .flexbox > div {
+
+} */
 
 /*Images in flexboxes are always on the left and have a background color of #F8FDFC, incase the image is broken*/
 .flexbox > img {
@@ -166,17 +222,17 @@ ul li a:hover {
 }
 
 /*Footer is given colour and is fixed to the bottom of the page*/
-footer {
+footer{
     font-family: "Montserrat", sans-serif;
     font-weight: 200;
     padding-left: 1vw;
-    padding-top: 2.5vw;
-    padding-bottom: 2vw;
+    padding-top: 3vw;
+    padding-bottom: 4vw;
     padding-right: 1vw;
-    margin-bottom: -1.1vw;
+    margin-bottom: -5vw;
     margin-left: -1vw;
-    height: 3vw;
-    width: 99.4%;
+    height: 2vw;
+    width: 100%;
     background-color: #000000;
     background: linear-gradient(0deg,rgba(0, 0, 0, 1) 65%, rgba(0, 0, 0, 0) 100%);
     color: #F8FDFC;
@@ -187,24 +243,24 @@ footer {
 }
 
 /* Put links in a column */
-.footer-links {
+.footer-links{
     display: flex;
-    flex-direction: column;
+    flex-direction: column-reverse;
     list-style: none;
-    padding-top: 5vw;
-    margin-left: -50vw;
+    margin-left: -45vw;
+    margin-top: 1vw;
 }
 
 /* Spacing of links */
 .footer-links li {
-    margin: -1.5vw 0;
+    margin: 0.5vw 0;
 }
 
 /* Text properties */
 .footer-links a {
     color: #F8FDFC;
     text-decoration: none;
-    font-size: 0.7vw;
+    font-size: 1.2vw;
 }
 
 /* Underline on hover */
@@ -213,11 +269,26 @@ footer {
     background-color: rgba(0, 0, 0, 0)
 }
 
+/* Logo Image in the footer */
 .footer-img{
-    height: 4vw;
+    height: 8vw;
     padding-left:1vw;
     margin-left: -1vw;
     margin-top: 0.5vw;
+}
+
+/* Back to top link in footer */
+.backtop{
+    color: #F8FDFC; 
+    font-size: 1.5vw; 
+    margin-left: -28vw;
+}
+
+/* My copyright */
+.copyright{
+    font-size: 1.5vw;
+    margin-left: -10vw;
+    padding-right: 2vw;
 }
 
 /*Header 360 Image JavaScript*/
@@ -229,6 +300,7 @@ iframe{
     width: 83vw;
     /* width: 101.45%; */
     height: 10.1vw;
+    overflow-x: hidden;
 }
 
  /*Clear any styling*/
@@ -250,27 +322,30 @@ iframe{
     padding-left: 5vw;
     padding-top: 1vh;
     margin-top: -2vw;
-    width: 95%;
-    height: 5vw;
-    top: 0.4vw;
+    width: 100%;
+    top: -2vw;
+    margin-left: -4.5vw;
+    margin-top: 1vw;
 }
 
 /* White bars for icon */
 .hamburger-menu .bar {
-    width: 3vh;
+    width: 2vw;
     height: 0.2vh;
     background-color: rgb(255, 255, 255);
-    margin: 4px 0;
+    margin-left: 1vw;
+    margin-top: 0.4vw;
 }
 
-/*Website adjustment for small screens*/
+/*Website adjustment for small screens(Mobile)*/
 @media (max-width: 1200px) {
+    /* Navigation bar changes dependant on screen size */
     .nav-links {
         display: none;
         flex-direction: column;
         background-color: #00000090;
         position: absolute;
-        top: 2.5vw;
+        top: 1vw;
         left: 0;
         width: 100%;
         text-align: center;
@@ -287,9 +362,16 @@ iframe{
     }
 
     .nav-links li {
-        padding: 15px 0;
+        padding-top: 0.5vw;
     }
 
+    .nav-links a {
+        display: block;
+        width: 100%;
+        padding: 2vw 0;
+    }
+
+    /* Hamburger menu show and not show on screen */
     .hamburger-menu {
         display: block;
         position: absolute;
@@ -298,16 +380,154 @@ iframe{
         height: 2vw;
         background: linear-gradient(0deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 1) 70%);
     }
-
+    .hamburger-menu a{
+        width:100vw;
+    }
+    /* Header positioning */
     .header{
         margin-top: -12.5vw;
         padding-bottom: 4vh;
         margin-bottom: -5.5vh;
     }
-
+    /* The position of the sticky nav bar when scrolled */
     .sticky {
         position: fixed;
-        top: 1.3vw;
+        top: 1vw;
         margin-left: -1.7vw;
     }
+    /* Changing the heading 2 */
+    h2{
+        font-size: 4vw;
+    }
+    /* For the company acronym alignment */
+    .company {
+        font-size: 5vw; 
+        margin-top: -2vw; 
+        font-weight: 400; 
+        letter-spacing: 3vw; 
+        color:white;
+    }
+    /* Changing heading 3 */
+    h3{
+        font-size: 3vw;
+    }
+    /* Changing heading 4 */
+    h4{
+        font-size: 2vw;
+    }
+    /* Changing paragraphs */
+    p{
+        font-size: 2vw;
+    }
+    /* Changes the width of the header */
+    iframe{
+        width: 103%;
+        overflow: hidden;
+    }
+}
+/* Footer and header sizing on small screen */
+@media (max-width: 1200px) {
+    h1{
+        font-size: 5vw;
+        margin-top: -20vw;
+    }
+    .head-img{
+        height: 10vw; 
+        margin-top: 10vw;
+        margin-left: -12vw;
+        margin-bottom: -3vw;
+    }
+    .pad{
+        padding-top: 170vw;
+    }
+    /*This header is on top of the 360 image, defines positioning*/
+    .header{
+        margin-top: -22vw;
+        margin-bottom: -10vw;
+        padding-bottom: 8vw;
+    }
+    footer{
+        height: 10vw;
+        margin-bottom: -2vw;
+        margin-left: -2vw;
+        width: 102%;
+    }
+
+    /* Text properties */
+    .footer-links a {
+        color: #F8FDFC;
+        text-decoration: none;
+        font-size: 2vw;
+        margin-left: 1.5vw;
+        z-index: 10;
+    }
+
+    /* Back to top link in footer */
+    .backtop{
+        color: #F8FDFC; 
+        font-size: 2.5vw; 
+        margin-left: -18vw;
+    }
+
+    /* My copyright */
+    .copyright{
+        font-size: 2.5vw;
+    }
+    /* Logo Image in the footer */
+    .footer-img{
+        height: 10vw;
+        padding-left:1vw;
+        margin-left: -1vw;
+        margin-top: 0.5vw;
+    }
+}
+
+/* --- Parallax Section Styling --- */
+.parallax-section {
+    /* Set a height to make the section visible */
+    height: 100vh;
+
+    /* Position the text */
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    padding-bottom: 50px;
+
+    /* This makes the background image fixed in relation to the viewport,
+       while the element itself scrolls. */
+    background-attachment: fixed;
+
+    /* Ensure the image covers the area and is centered */
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    color: white;
+    text-shadow: 2px 2px 4px #000000;
+    width: 100vw;
+    margin-left: calc(-50vw + 50%);
+}
+
+.parallax1 {
+    background-image: url('images/aisat6.png');
+}
+
+.parallax2 {
+    background-image: url('images/360image.jpg');
+    align-items: center;
+}
+
+.parallax-text {
+    font-size: 3em;
+    margin-bottom: 3vw;
+    font-family: "Zalando Sans", sans-serif;
+    font-weight: 300;
+}
+
+/* --- Content Section Styling --- */
+.content-section {
+    height: 120vh; /* Make this section tall enough to force scrolling */
+    padding: 50px 20px;
+    background-color: #00000000;
+    text-align: center;
 }

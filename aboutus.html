@@ -1,0 +1,697 @@
+<!DOCTYPE html>
+<html lang="en">
+  <!--© Vince Vagay 30036567-->
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About Us</title>
+  <link rel="stylesheet" href="mystyle.css" type="text/css">
+  <!-- Specific page styling -->
+  <style>
+    /* Heading 4 */
+    h4{
+        color: #F8FDFC;
+        font-family: "Open Sans", sans-serif;
+        font-weight: 400;
+        margin-top: 6vw;
+        font-size: 1.5vw;
+        margin-left: 44%;
+    }
+
+    b{
+      margin-left: -50vw;
+    }
+
+    /* Unordered list within a flexbox */
+    .flexbox ul{
+        margin-top: -3vw;
+        display: flex;
+        list-style-type: none;
+        padding-left: 14vw;
+    }
+
+    /* For the text in the list */
+    .flexbox ul li{
+      margin-top: -1vw;
+      margin-left: -8.5vw;
+      font-size: 1.2vw;
+    }
+
+    .flexbox h6{
+      margin-left: 20vw;
+    }
+
+    /* For paragraphs within the flexbox */
+    .flexbox p{
+        padding-left: 10.5vw;
+        padding-top: 1vw;
+        max-width: 38%;
+    }
+    /* For text in lists */
+    .lists{
+        display: flex;
+        flex-direction: column;
+        list-style: none;
+        padding-top: 3vw;
+        text-align: left;
+        font-size: 1.2vw;
+        font-weight: 10;
+        width: 70%;
+    }
+
+    .lists li {
+        margin-bottom: 2vw;
+    }
+
+        
+    /* Alighment and sizing of company acronym */
+    .company {
+        font-size: 5vw; 
+        letter-spacing: 2.1vw;
+        margin-top: -2vw; 
+        font-weight: 400; 
+        justify-content: center;
+        text-align: center;
+        text-shadow: 2px 5px 10px black;
+        margin-bottom: -5vw;
+    }
+    /* Description of Acronym */
+    .desc{
+        margin-left: 5vw;
+    }
+      
+    /* For paragraphs in the list under the ODS*/
+    .flexbox ul p{
+        font-size: 1vw;
+        color: #ffffff;
+        font-family: "Open Sans", sans-serif;
+        font-weight: 300;
+        text-align: center;
+        width: 50%;
+        margin-top: -3vw;
+        background-color: rgba(0, 0, 0, 0);
+    }
+    /* Cards sourced from Google's Gemini  */
+    /* Sizing is done by me */
+    /* Grid Container */
+    .grid-container {
+        display: grid;
+        padding-top: 3vw;
+        grid-template-columns: repeat(3, 1fr); /* 3 equal columns */
+        gap: 30px; /* Spacing between grid items */
+        max-width: 90%;
+        margin: 0 auto; /* Center the grid */
+    }
+
+    /* Person Card Styling */
+    .person-card {
+        background-color: #1a1a1a; /* Slightly lighter dark background for cards */
+        border-radius: 10px; /* Subtle border radius */
+        padding: 0; /* Remove padding here, elements inside will handle it */
+        text-align: left; /* Align text to the left */
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2); /* Soft shadow */
+        overflow: hidden; /* Ensures border-radius applies to children */
+        height: 90%;
+        padding-bottom: 4vw;
+        margin-bottom: 2vw;
+    }
+
+    /* Parallax Section */
+    .parallax-section {
+        margin-bottom: 5vw;
+    }
+
+    /* Content Section */
+    .content-section {
+        margin-top: 5vw;
+    }
+
+    /* Images for the Staff Members */
+    .person-card img{
+      max-width: 100%;
+    }
+
+    /* Role Title */
+    .person-card h3 {
+        color: #e0e0e0; /* Light grey for names */
+        margin-left: 1vw;
+        margin-top: -2vw;
+        font-size: 1.5vw;
+        font-weight: normal; /* Match the provided image's font weight */
+    }
+    /* Details of Role */
+    .person-card .details {
+        color: #aaaaaa; /* Slightly darker grey for details */
+        font-size: 0.8vw;
+        line-height: 1.6;
+        padding-left: 2vw;
+        margin-top: 0vw;
+        max-width: 100%;
+        padding-bottom: 4vw;
+    }
+    .pad{
+      padding-top: 205vw;
+    }
+    /* Responsive adjustments for smaller screens */
+    @media (max-width: 768px) {
+        .grid-container {
+          grid-template-columns: repeat(2, 1fr); /* 2 columns on tablets */
+          padding-left: 3vw;
+          padding-top: 3vw;
+        }
+        .person-card{
+          max-width: 90%;
+          padding-bottom: 4vw;
+        }
+        .person-card h3 {
+          font-size: 1.5vw;
+          padding-left: 1vw;
+        }
+        .person-card .details {
+          font-size: 1vw;
+          line-height: 1.6;
+          padding-left: 2vw;
+        }
+        /* For the text in the list */
+        .flexbox ul li{
+          margin-top: -1vw;
+          margin-left: -4vw;
+          font-size: 1.9vw;
+        }
+        .lists{
+          width: 80%;
+        }
+        .desc{
+        margin-left: -4.9vw;
+        }
+        /* Alighment and sizing of company acronym */
+        .company {
+            font-size: 5vw;
+            letter-spacing: 2.9vw;
+            margin-left: 0vw;
+        }
+        .pad{
+          padding-top: 450vw;
+        }
+    }
+
+    @media (max-width: 480px) {
+        .grid-container {
+          grid-template-columns: 1fr; /* Single column on mobile */
+          padding-left: 22%;
+          padding-top: 5vw;
+        }
+        .person-card{
+          max-width: 100%;
+          margin-left: -6.5vw;
+        }
+        .person-card h3 {
+          font-size: 3vw;
+          padding-left: 1vw;
+        }
+        .person-card .details {
+          font-size: 2vw;
+          line-height: 1.6;
+          padding-left: 2vw;
+          padding-bottom: 6vw;
+        }
+        /* For the text in the list */
+        .flexbox ul li{
+          margin-top: -1vw;
+          margin-left: -4vw;
+          font-size: 2.5vw;
+        }
+        .lists{
+          width: 80%;
+        }
+        /* Alighment and sizing of company acronym */
+        .company {
+          font-size: 9vw; 
+          letter-spacing: 3.3vw;
+          margin-left: 0vw
+        }
+        /* Lists at the bottom of page # */
+        .flexbox ul li{
+          margin-left: -3vw;
+          font-size: 2vw;
+          max-width: 67%;
+          padding-left: 5vw;
+        }
+        /* The list under ODS # */
+        .flexbox ul{
+          width: 120%;
+          padding-left: 3vw;
+        }
+        .flexbox ul h4{
+          font-size: 3.6vw; 
+        }
+        /* The list under ODS */
+        .flexbox ul li p{
+          margin-top: -6vw;
+          font-size: 1.9vw;
+          max-width: 100%;
+          padding-left: 12vw;
+        }
+        /* Under the ODS */
+        .flexbox .desc{
+          margin-left: -11vw;
+          margin-right: -25vw;
+        }
+        .pad{
+          padding-top: 1070vw;
+        }
+      }
+  </style>
+</head>
+
+<!--Header contains logo and title-->
+<iframe src="background.html" style="padding-left: 0.05vw; border-color: #00000000;"></iframe>
+<header id="header" class="header">
+    <!--For title of page-->
+    <div>
+        <img class="head-img"src="images/ODSlogo.png" alt="HeaderLogo"/>
+    </div>
+    <div>
+      <h1 style="margin-top: -6vw; padding-bottom: 2.5vw; text-shadow: 2px 3px #0b0b0bbb;">Orbital Dynamic Solutions</h1> 
+    </div>
+</header>
+<!--Header ends here-->
+<!--Body starts here-->
+<body>
+</div> 
+<!--Navigation starts here-->
+<div class="nav" id="nav">
+    <span>
+    <div style="text-align: center;">
+      <nav class="navbar">
+        <div class="hamburger-menu">
+            <div class="bar"></div>
+            <div class="bar"></div>
+            <div class="bar"></div>
+        </div>
+      <ul class="nav-links" >
+        <li><a class="non" href="index.html" style="color: white;">Homepage</a> </li>
+        <li><a class="non" href="aboutus.html" style="color: white;">About Us</a> </li>
+        <li><a class="non" href="scope.html" style="color: white;">Project Scope</a> </li>
+        <li><a class="non" href="competition.html" style="color: white;">Competition</a> </li>
+        <li><a class="non" href="diagrams.html" style="color: white;">Diagrams</a> </li>
+        <li><a class="non" href="partners.html" style="color: white;">Partners</a> </li>
+        <li><a class="non" href="contactus.html" style="color: white;">Contact Us</a> </li>
+      </ul>
+    </div>
+    </span>
+</div>
+<!--Js to make nav scroll with page-->
+<!--Js toggle hamburger menu visibility-->
+<script>
+  window.onscroll = function() {myFunction()};
+  
+  var nav = document.getElementById("nav");
+  var sticky = nav.offsetTop;
+  
+  function myFunction() {
+    if (window.pageYOffset > sticky) {
+      nav.classList.add("sticky");
+    } else {
+      nav.classList.remove("sticky");
+    }
+  }
+
+  document.addEventListener('DOMContentLoaded', function() {
+    const hamburgerMenu = document.querySelector('.hamburger-menu');
+    const navLinks = document.querySelector('.nav-links');
+
+    hamburgerMenu.addEventListener('click', function() {
+        navLinks.classList.toggle('active');
+    });
+});
+</script>
+<script src="parallax.js"></script>
+
+<!--Navigation ends here-->
+
+<!--Start of flexboxes to divide webpage-->
+<div class="flexbox" style="text-align: center;">
+    <h2>About Us</h2>
+    <div class="centre">
+    <h3 style="font-weight: 500; text-align: center; margin-top: 5vw; margin-left: -3vw; text-decoration: none; font-size: 2.5vw; padding-bottom: 2vw;">
+      Company Name</h3>
+    <h2 class="company">O · D · S</h2>
+    <ul class="desc">
+        <li><h4 style="margin-left: 10vw;">Orbital</h4>
+          <p style="margin-left: -2vw;">Directly relates to space, satellites, and celestial mechanics.</p></li>
+        <li><h4 style="margin-left: 12vw;">Dynamic</h4>
+          <p style="margin-left: -2vw;">Implies movement, change, and complex systems, fitting for simulations and adaptable designs.</p></li>
+        <li><h4 style="margin-left: 2.9vw;;">Solutions</h4>
+          <p style="margin-left: -9.4vw;">Positions the company as providing answers and practical applications for complex challenges.</p></li>
+    </ul>
+    </div>
+    <div>
+        <h3>Company Information</h3>
+        <p style="margin-left: -5vw; font-weight: 1; max-width: 75vw;">- Our company's core business is the specialized design, 
+            fabrication, and extensive testing of advanced robotic satellites for interplanetary exploration, leveraging unique 
+            propellant-less propulsion technology. <br><br>
+            - Our product is a highly capable robotic satellite, designed to investigate other planets, moons, and asteroids 
+            across the solar system. <br><br>
+            - Our key capability lies in our deep expertise across satellite technologies, from initial concept to rigorous 
+            pre-launch validation. Our technical capabilities, staffing, and equipment for this project are detailed in the 
+            company information section.</p>
+        <h3 style="font-weight: 500; text-align: center; margin-left: -4vw; text-decoration: none; font-size: 3vw;">
+          Company Roles</h3> 
+        <div>
+        <div class="grid-container">
+          <div class="person-card">
+            <!-- Images generated are AI - Using Google Gemini 2.5 Flash, Watermark has been left in-->
+            <!-- Using this prompt: Please generate corresponding images of people to fill the roles.
+                Make it shoulder up, professional photographed
+                with white lighting and soft glow, bokeh effect -->
+              <img src="images/aiperson1.png" alt="Alice Johnson - CEO">
+              <h3>CEO</h3>
+              <p class="details"><span style="color: white;">Alice Johnson </span><br><br>The ultimate visionary and decision-maker. She is responsible for the overall strategic direction of the company, managing key partnerships and ensuring the company's business goals are met.
+              </p>
+          </div>
+
+          <div class="person-card">
+              <img src="images/aiperson2.png" alt="Ben Carter - Financial Controller">
+              <h3>Financial Controller</h3>
+              <p class="details"><span style="color: white;">Ben Carter</span><br><br>Him and his team are responsible for managing all financial operations, including budgeting, accounting, financial reporting and providing strategic financial insights.
+              </p>
+          </div>
+
+          <div class="person-card">
+              <img src="images/aiperson3.png" alt="Jeff Hubble - Technical Manager">
+              <h3>Technical Manager</h3>
+              <p class="details"><span style="color: white;">Jeff Hubble</span><br><br>Him and his team oversee the high-level technical integrity, system architecture, and integration for the core technological design and research. Given the company's size, the technical manager is also the Chief Technical Officer (CTO) or Head of Systems Engineering.
+
+              </p>
+          </div>
+
+          <div class="person-card">
+              <img src="images/aiperson4.png" alt="Claire Davis - Software Manager">
+              <h3>Software Manager</h3>
+              <p class="details"><span style="color: white;">Claire Davis</span><br><br>Her and her team are responsible for all software like creating and running the computational models and simulations for missions. Her team also develops the satellite's onboard software and the ground-based control systems.
+              </p>
+          </div>
+
+          <div class="person-card">
+              <img src="images/aiperson5.png" alt="Gabriel Hayes - Engineering Manager">
+              <h3>Engineering Manager</h3>
+              <p class="details"><span style="color: white;">Gabriel Hayes</span><br><br>Him and his team are responsible for the mechanical, electrical, and propulsion engineering aspects of the satellite's physical build, the design, manufacturing, prototyping, and rigorous testing of the satellite's hardware, housing, and all integrated components. His is the largest team, reflecting the hardware-intensive nature of satellite development.
+              </p>
+          </div>
+
+          <div class="person-card">
+              <img src="images/aiperson6.png" alt="Chloe Stone - Telemetry Manager">
+              <h3>Telemetry Manager</h3>
+              <p class="details"><span style="color: white;">Chloe Stone</span><br><br>Her and her team are specialists in communication with the satellite. Their role involves acquiring signals, monitoring the continuous data streams, and managing the ground-based communication network.
+              </p>
+          </div>
+        </div>
+    </div>
+    <!-- Parallax Area -->
+    <div class="parallax-section parallax1">
+        <h1 class="parallax-text"><span style="font-weight: 600;">Meet Our Satellite</span> <br> Orbital 1</h1>
+    </div>
+
+    <div class="content-section" style="background-attachment: fixed;">
+      <h3 style="font-weight: 500; text-align: center; margin-left: -4vw; margin-top: -2vw; text-decoration: none; font-size: 3.5vw;">
+        Satellite Instruments</h3>
+      <h3 style="text-align: center; margin-left: -4vw;">Imaging & Sensing Modules</h3>
+        <div class="grid-container">
+          <div class="person-card">
+            <!-- Images generated are AI - Using Google Gemini 2.5 Flash, Watermark has been left in-->
+              <img src="images/aivls.png" alt="Visible Light Spectrum Camera">
+              <h3></h3>
+              <p class="details"><span style="color: white;">Visible Spectrum Camera</span><br><br>This module captures high-resolution imagery in the visible light range. While it can be adapted for specialized applications like attaching to Dobsonian-type optical systems for astronomical observation, its primary role on a satellite is often for Earth observation, planetary imaging, or star tracking.
+
+              </p>
+          </div>
+
+          <div class="person-card">
+              <img src="images/aiirc.png" alt="Infrared (IR) Camera">
+              <h3></h3>
+              <p class="details"><span style="color: white;">Infrared (IR) Camera</span><br><br>Designed for thermal imaging and heat sensing, this camera detects infrared radiation emitted by objects. It's crucial for applications like environmental monitoring, detecting heat signatures, and analyzing atmospheric conditions where temperature variations are key.
+
+              </p>
+          </div>
+
+          <div class="person-card">
+              <img src="images/aiuvc.png" alt="Ultraviolet (UV) Camera">
+              <h3></h3>
+              <p class="details"><span style="color: white;">Ultraviolet (UV) Camera</span><br><br>This module specializes in detecting high-frequency ultraviolet light. It's vital for studying phenomena such as planetary atmospheres, aurorae, and stellar activity, where UV emissions provide unique insights.
+
+
+              </p>
+          </div>
+        </div>
+
+      <h3 style="text-align: center; margin-left: -4vw;" >Field Measurement Modules</h3>
+          
+        <div class="grid-container">
+          <div class="person-card">
+              <img src="images/aimag.png" alt="Magnetometer">
+              <h3></h3>
+              <p class="details"><span style="color: white;">Magnetometer</span><br><br>A precision instrument engineered to measure and record the strength and direction of magnetic fields around planets, celestial bodies, and in space. It's fundamental for understanding magnetospheres, planetary cores, and solar wind interactions.
+
+              </p>
+          </div>
+
+          <div class="person-card">
+              <img src="images/ailmd.png" alt="Metal Detector">
+              <h3></h3>
+              <p class="details"><span style="color: white;">Metal Detector</span><br><br>This short-range induction sensor is designed to detect the presence of metallic elements. With an effective range of less than one meter, it's ideally suited for close-proximity surveys, such as directly engaging with asteroid surfaces to assess metallic composition.
+
+              </p>
+          </div>
+
+          <div class="person-card">
+              <img src="images/aigrav.png" alt="Gravimeter">
+              <h3></h3>
+              <p class="details"><span style="color: white;">Gravimeter</span><br><br>This module precisely measures the strength of gravitational fields of planets and other celestial objects. It's crucial for mapping gravitational anomalies, understanding planetary interior structures, and calculating orbital dynamics.
+
+              </p>
+          </div>
+
+          <div class="person-card">
+              <img src="images/aili.png" alt="Light Intensity Sensor">
+              <h3></h3>
+              <p class="details"><span style="color: white;">Light Intensity Sensor</span><br><br>This sensor quantifies the intensity of incident light, whether from the sun or reflected from celestial bodies. It's used to determine properties like albedo (reflectivity) and to understand the light environment within the satellite's operational vicinity.
+
+              </p>
+          </div>
+
+          <div class="person-card">
+              <img src="images/airs.png" alt="Radio Spectrum Receiver">
+              <h3></h3>
+              <p class="details"><span style="color: white;">Radio Spectrum Receiver</span><br><br>A specialized receiver that detects and records radio emissions from target objects. It's particularly valuable for studying planetary atmospheres, which generate distinct radio frequency noises through their interaction with solar particles, providing unique acoustic signatures for each planet.
+
+              </p>
+          </div>
+        </div>
+        <h3 style="text-align: center; margin-left: -4vw;" >Core Satellite Systems</h3>
+          
+        <div class="grid-container">
+          <div class="person-card">
+              <img src="images/aiprop.png" alt="Propulsion System">
+              <h3></h3>
+              <p class="details"><span style="color: white;">Propulsion System</span><br><br>This innovative, propellant-less propulsion unit generates unidirectional thrust through the interaction of orthogonal electric fields. It operates continuously as long as it has an electrical power source. While it lacks the thrust for planetary surface launch, it provides sufficient self-generated thrust to escape Earth's gravity from Low Earth Orbit (LEO) and execute deep-space missions.
+
+              </p>
+          </div>
+
+          <div class="person-card">
+              <img src="images/aienclo.png" alt="Enclosure/Housing">
+              <h3></h3>
+              <p class="details"><span style="color: white;">Enclosure/Housing</span><br><br>The robust structural shell of the spacecraft, designed to house and rigidly secure all internal components, protecting them from the harsh space environment and maintaining structural integrity.
+
+
+              </p>
+          </div>
+          
+          <div class="person-card">
+              <img src="images/airtg.png" alt="Radioisotope Thermoelectric Generator">
+              <h3></h3>
+              <p class="details"><span style="color: white;">Radioisotope Thermoelectric Generator (RTG)</span><br><br>A highly reliable electrical power source that converts heat from radioactive decay directly into electricity. It's ideal for long-duration missions, especially in the outer solar system where solar power is not viable.
+
+
+              </p>
+          </div>
+          
+          <div class="person-card">
+              <img src="images/aisp.png" alt="Solar Panel Arrays">
+              <h3></h3>
+              <p class="details"><span style="color: white;">Solar Panel Arrays</span><br><br> These arrays convert sunlight into electrical power, providing the primary energy source for missions within the inner solar system. Their viability extends to the Asteroid Belt, though very large arrays are required at such distances to generate sufficient power.
+
+
+              </p>
+          </div>
+          
+          <div class="person-card">
+              <img src="images/aibc.png" alt="Battery Bank">
+              <h3></h3>
+              <p class="details"><span style="color: white;">Battery Bank</span><br><br>A critical energy storage unit designed to store electrical charge generated by the RTG or Solar Panel Arrays. These stored reserves provide power for peak operational demands and during periods when primary power generation is limited (for example, in shadows or when solar panels are not optimally oriented).
+
+              </p>
+          </div>
+        </div>
+    </div>
+    <!-- END Parallax Section -->
+     <div class="pad">
+        <h3>Expertise</h3>
+        <p style="margin-left: -5vw; font-weight: 1; max-width: 75vw;">
+            The company prides itself on our design and engineering capabilities, backed by a team of
+            seasoned engineers who bring expertise in every area crucial to satellite development that
+            includes aerospace, mechanical, electrical, software, and systems engineering. Our
+            engineers excel at designing highly optimized, robust, and reliable satellite platforms tailored
+            to the specific mission requirements.<br><br>
+            Our rapid prototyping capabilities enable us to quickly build and test models/modules of
+            the components and sub-components of the satellite to see how they fit and interact with the
+            system. This is an iterative process, with each prototype we can build upon the success of
+            previous models as well as improve/resolve the issues that pertained to previous iterations.<br><br>
+            Strict tolerances in our manufacturing process leads to high quality control assurances via
+            our state-of-the-art manufacturing facilities, equipped with precision machinery and staffed
+            by highly skilled technicians. It ensures every component we manufacture meets the
+            rigorous demands of the space environment.<br><br>
+            We utilise advanced modeling and simulation software designed in-house. Before we
+            create a physical component, we first model it in the computer to see if it fits within the
+            system. Not only can we see how it fits, but also simulate the component working within the
+            system of the satellite and then simulate how the satellite would operate within the
+            environment of space. Doing it right the first time, or in fewer attempts, saves us valuable
+            time and money by avoiding the need to physically recreate components over and over.<br><br>
+            We deploy rigorous testing and validation for our satellites to meet industry standards. We
+            subject our satellites to extreme environmental conditions - vacuum, vibration, thermal
+            cycling, radiation testing and more, to mimic the harsh realities of space to ensure absolute
+            reliability and mission success.
+        </p>
+        <h3>What the Company Presently Does</h3>
+        <p style="margin-left: -5vw; font-weight: 1; max-width: 75vw;">On-going research and development(R&D) is done to find and explore new materials and
+            manufacturing processes to incorporate into the project. We are constantly investigating
+            lighter materials that yield more strength, also known as researching high strength-to-weight
+            materials. Deploying techniques such as additive manufacturing such as 3D printing and/or
+            subtractive manufacturing such as CNC.<br><br>
+            We are also working on and fine-tuning the propulsion systems to make them more
+            efficient while also maintaining great maneuverability.<br><br>
+            Developing new antenna designs, frequency bands, and data processing to handle
+            more bandwidth in the transmission back to Earth for higher speed and stability of payload
+            telemetry data.
+        </p>
+        <h3>Hardware and Facilities</h3>
+            <h5>Manufacturing & Assembly Facilities</h5>
+            <ul class="lists" style="padding-top: 3vw;">
+            <li>Cleanrooms (ISO 5, 7, and higher): These are environmentally controlled facilities with
+            meticulously filtered air to prevent contamination during the assembly of sensitive satellite
+            components, particularly optical instruments and microelectronics. We possess various
+            classes of cleanrooms, including modular and fixed structures, to accommodate diverse
+            stages of assembly.</li>
+            </ul>
+            <h6><b>Precision Machining and Fabrication Equipment:</b></h6>
+            <ul class="lists">
+            <li>• CNC machines: Computer Numerical Control machines provide high-precision
+            cutting, drilling, and shaping of satellite structures and components from materials
+            such as aluminum, titanium, and advanced composites.</li>
+            <li>• Welding and bonding equipment: This specialized equipment is used for joining
+            exotic materials and delicate components, encompassing orbital welding systems for
+            fluid lines and advanced composite bonding stations.</li>
+            <li>• Additive manufacturing (3D Printing) systems: Our industrial-grade 3D printers
+            are capable of producing complex geometries and lightweight structures from metals
+            and high-performance polymers, facilitating rapid prototyping and the creation of
+            specialized components.</li>
+            </ul>
+            <h6 style="margin-left:17vw"><b>Electronics Manufacturing & Assembly Lines:</b></h6>
+            <ul class="lists">
+            <li>• Surface mount technology (SMT) lines: These automated systems enable the
+            precise placement of miniature electronic components onto circuit boards.</li>
+            <li>• Wire bonding machines: Equipment designed for creating electrical connections
+            between microchips and their packaging.</li>
+            <li>• Soldering and inspection stations: Featuring advanced soldering equipment and
+            Automated Optical Inspection (AOI) systems for rigorous quality control of electronic
+            assemblies.</li>
+            </ul>
+            <h5 style="margin-left: -18vw; margin-top: -3vw;">Advanced Testing & Validation Facilities</h5>
+            <ul class="lists" style="padding-top: 3vw;">
+            <li>Thermal vacuum chambers (TVACs): These chambers simulate the vacuum of space and
+            the extreme temperature fluctuations experienced in orbit. They are used to validate the
+            performance and durability of our entire satellite or individual components under realistic
+            space conditions.</li>
+            </ul>
+            <h6 style="margin-left:14vw"><b>Vibration and Acoustic Testing Facilities:</h6></b>
+            <ul class="lists">
+            <li>• Shaker tables (electrodynamic and servo-hydraulic): These powerful machines
+            simulate the intense vibrations and shocks encountered during a rocket launch,
+            essential for verifying the structural integrity and survivability of satellites.</li>
+            <li>• Acoustic chambers: Rooms equipped with high-power speakers to expose
+            satellites to the extreme noise levels generated by launch vehicles.</li>
+            </ul>
+            <ul class="lists">
+            <li>• Anechoic chambers / RF test chambers: These specialized rooms are designed to
+            absorb electromagnetic waves, creating an interference-free environment for testing
+            satellite communication systems, antennas, and payloads. This includes:</li>
+            <li>• Antenna test ranges (near-field and far-field): For precisely measuring antenna
+            radiation patterns, gain, and efficiency.</li>
+            <li>• Electromagnetic compatibility (EMC) / Electromagnetic interference (EMI)
+            chambers: To ensure that satellite electronics do not interfere with each other and
+            are immune to external electromagnetic noise.</li>
+            </ul>
+            <h6 style="margin-left:9vw"><b>Propulsion System Test Facilities:</b></h6>
+            <ul class="lists">
+            <li>• Test chambers: Contain a highly specialized and complex environment designed to
+            rigorously evaluate the performance, reliability, and safety of engines and thrusters
+            across various operational conditions.</li>
+            <li>• Vacuum test stands: For firing thrusters in a simulated space environment and
+            measuring thrust, specific impulse, and efficiency.</li>
+            <li>• Propellant handling systems: For storing and managing the necessary propellants
+            reliably and safely.</li>
+            </ul>
+            <h6 style="margin-left:12vw"><b>Sensor Calibration and Test Benches:</b></h6>
+            <ul class="lists">
+            <li>• Optical benches: High-precision, vibration-isolated tables for aligning and calibrating
+            optical instruments such as Visible, IR, and UV cameras.</li>
+            <li>• Magnetic helmholtz coils: For creating controlled magnetic fields to accurately
+            calibrate magnetometers.</li>
+            <li>• Gravity gradiometer test stands: For calibrating gravimeters.</li>
+            <li>• Radio frequency shielded rooms: For testing radio spectrum receivers in an
+            isolated environment.</li>
+            </ul>
+            <h5 style="margin-top: -3vw; margin-left: -17vw; padding-bottom: 2vw;">Data Processing & Simulation Hardware</h5>
+            <!-- <p style="max-width: 100%; font-size: 1.2vw; font-weight: 100; margin-left: -5vw; color: white"> -->
+            <ul class="lists">
+            <li>High-performance computing clusters (HPC): These powerful computer systems,
+            equipped with specialized processors (CPUs and GPUs), are used for running complex
+            orbital mechanics simulations, finite element analysis (FEA) for structural integrity,
+            computational fluid dynamics (CFD) for thermal modeling, and large-scale data processing
+            for mission planning and post-mission analysis.</li>
+            </ul>
+            <br><br><br><br>
+    </div></div></div>
+</div>
+</body>
+<!--Body ends here-->
+<!--Link to scroll you back to top of page-->
+<div style="text-align: center;">
+<!--Footer that travels with you at the bottom of page-->
+<footer>
+     <!-- Company Logo -->
+    <span style="float: left; margin-left:1vw;">
+        <img  class="footer-img" src="images/ODSlogo.png" alt="HeaderLogo"/>
+    </span>
+    <!-- Links column on the left -->
+    <div>
+        <ul class="footer-links">
+            <li><a href="references.html">References</a></li>
+            <li><a href="contactus.html">Contact Us</a></li>
+            <li><a href="aboutus.html">About Us</a></li>
+        </ul>
+    </div>
+    <!-- Links user back to the top of the page using the header -->
+    <div>
+        <a class="backtop" href="#header">Back to top</a>
+    </div>
+    <!-- Copyright on the right -->
+    <div style="display: flex; align-items: center; justify-content: flex-end;">
+        <span class="copyright">© Vince Vagay | 2025</span>
+    </div>
+</div>
+</footer>
+
+</html>
