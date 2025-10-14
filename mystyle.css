@@ -19,11 +19,13 @@ html {
 }
 
 /* Body image as a Starry Night Sky */
+/* Repeated so it's more high resolution with scaling */
 body{
     background-color: #000000;
     font-family: "Open Sans", sans-serif;
     background-image: url(images/StarrySky.png);
-    background-size:initial;
+    background-size:100em;
+    background-repeat: repeat;
     overflow-x: hidden;
 }
 
@@ -48,7 +50,8 @@ h1{
 
 /* Heading 2 */
 h2{
-    text-align: center;
+    width: 100%; 
+    text-align: left;
     font-size: 2.5vw;
     padding-top: 2%;
     margin-top: 2vw;
@@ -58,8 +61,8 @@ h2{
     font-optical-sizing: auto;
     font-weight: 500;
     margin-left: 3vw;
-    
     text-shadow: 2px 5px 10px black;
+    padding-bottom: 2vw;
 }
 
 /* Heading 3 */
@@ -72,14 +75,23 @@ h3{
     font-family: "Zalando Sans", sans-serif;
     font-weight: 350;
     color: #F8FDFC;
-    padding-top: 2.5vw;
+    padding-top: 1vw;
     text-decoration-thickness: 0.05em;
     text-shadow: 2px 5px 5px black;
+    padding-top: 2vw;
 }
 
 /* Heading 4 */
 h4{
     text-shadow: 0px 5px 15px black;
+    color: #F8FDFC;
+    font-size: 1.3em;
+    /* margin-left: -6vw; */
+    /* padding-top: 4vw; */
+    font-weight: 300;
+    text-align: left;
+    max-width: 90%;
+    padding-left: 4vw;
 }
 
 /* Heading 5 */
@@ -107,7 +119,6 @@ h6{
     color: white;
 }
 
-
 /* Text in a list within the flexbox */
 .flexbox ul li{
     color: white;
@@ -134,13 +145,13 @@ p{
     display: flex;
     flex-wrap: wrap;
     background: #1919195d;
+    border-radius: 10px 10px 10px 10px;
     height: 100%;
     width: 80%;
     margin-left: 10%;
     margin-top: -0.3vw;
     text-align: center;
     z-index: 2;
-    /* outline: 2px solid rgb(0, 0, 0); */
 }
 
 /* Centering items within the flexbox */
@@ -153,18 +164,11 @@ p{
     text-align: left;
 }
 
-/*Divisions in flexboxes have chosen elements*/
-/* .flexbox > div {
-
-} */
-
-/*Images in flexboxes are always on the left and have a background color of #F8FDFC, incase the image is broken*/
+/*Images in flexboxes are full width and have a transparent background color, incase the image is broken*/
 .flexbox > img {
-    float: left;
-    max-height: 100%;
-    min-width: 100%;
-    vertical-align: bottom;
-    background-color: #F8FDFC;
+    width: 100%;
+    height: auto;
+    background-color: #00000000;
 }
 
 /*Nav bar*/
@@ -177,7 +181,7 @@ p{
     background: #000000;
     background: linear-gradient(0deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 1) 10%);
     background-image: url(images/StarrySky.png);
-    width: 101.64%;
+    width: 103%;
     text-align: center;
     text-shadow: 1px 1px 2px black;
     z-index: 100;
@@ -210,7 +214,7 @@ ul li a:hover {
     text-decoration: underline;
 }
 
-/*Makes nav bar stick to top on scroll*/
+/* Makes nav bar stick to top on scroll*/
 /* Makes the nav bar half transparent */
 .sticky {
     position: fixed;
@@ -226,7 +230,7 @@ footer{
     font-family: "Montserrat", sans-serif;
     font-weight: 200;
     padding-left: 1vw;
-    padding-top: 3vw;
+    padding-top: 5vw;
     padding-bottom: 4vw;
     padding-right: 1vw;
     margin-bottom: -5vw;
@@ -297,9 +301,8 @@ iframe{
     z-index: 1;
     margin-left:-12px;
     margin-top:-10px;
-    width: 83vw;
-    /* width: 101.45%; */
-    height: 10.1vw;
+    width: 102%;
+    height: 13vw;
     overflow-x: hidden;
 }
 
@@ -343,7 +346,7 @@ iframe{
     .nav-links {
         display: none;
         flex-direction: column;
-        background-color: #00000090;
+        background-color: #000000ce;
         position: absolute;
         top: 1vw;
         left: 0;
@@ -368,7 +371,7 @@ iframe{
     .nav-links a {
         display: block;
         width: 100%;
-        padding: 2vw 0;
+        padding: 1.8vw 0;
     }
 
     /* Hamburger menu show and not show on screen */
@@ -437,9 +440,6 @@ iframe{
         margin-left: -12vw;
         margin-bottom: -3vw;
     }
-    .pad{
-        padding-top: 170vw;
-    }
     /*This header is on top of the 360 image, defines positioning*/
     .header{
         margin-top: -22vw;
@@ -482,7 +482,19 @@ iframe{
     }
 }
 
-/* --- Parallax Section Styling --- */
+@media (max-width: 480px) {
+    body {
+        overflow-x: hidden;
+    }
+    .flexbox{
+        width: 80%;
+    }
+    iframe{
+        width: 105%;
+    }
+}
+
+/* Parallax Section Styling */
 .parallax-section {
     /* Set a height to make the section visible */
     height: 100vh;
@@ -508,6 +520,7 @@ iframe{
     margin-left: calc(-50vw + 50%);
 }
 
+/* Different Parallax Images are labelled and go here */
 .parallax1 {
     background-image: url('images/aisat6.png');
 }
@@ -517,17 +530,13 @@ iframe{
     align-items: center;
 }
 
+/* For any text over the parallax image */
 .parallax-text {
-    font-size: 3em;
+    font-size: 2em;
     margin-bottom: 3vw;
     font-family: "Zalando Sans", sans-serif;
     font-weight: 300;
 }
 
-/* --- Content Section Styling --- */
-.content-section {
-    height: 120vh; /* Make this section tall enough to force scrolling */
-    padding: 50px 20px;
-    background-color: #00000000;
-    text-align: center;
-}
+/* Content Section Styling */
+

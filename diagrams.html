@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+  <!--© Vince Vagay 30036567-->
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Diagrams</title>
+  <link rel="stylesheet" href="mystyle.css" type="text/css">
+  <style>
+    /* Heading 5 */
+    h5{
+        all:unset;
+        margin-bottom: 0vw;
+        padding-left: 4vw;
+        font-size: 2vw;
+        font-weight: 1;
+        max-width: 75vw;
+        color: white;
+        text-decoration: underline;
+    }
+    /* Embeded Google Docs */
+    .doc{
+      max-width:200vw;
+      height:70vh;
+      padding-left: 4vw;
+      margin-right: 0vw;
+      overflow-x: hidden;
+      aspect-ratio: 10vw;
+      /* margin-left: 1vw; */
+      padding-right: 1vw;
+    }
+    .linkeddoc{
+       color: white;
+       font-size: 2.5vw;
+       padding: 4vw 4vw;
+       width: 100%;
+       text-align: left;
+    }
+    .hid{
+      margin-top: -1vw;
+      margin-bottom: 1vw;
+    }
+    /* The embeded diagrams don't play nice on small screens, so it's hidden */
+    @media (max-width: 480px) {
+        .doc {
+          display: none;
+        }
+        .hid {
+          display: none;
+        }
+      }
+  </style>
+</head>
+
+<!--Header contains logo and title-->
+<iframe src="background.html" style="padding-left: 0.05vw; border-color: #00000000;"></iframe>
+<header id="header" class="header">
+    <!--For title of page-->
+    <div>
+        <img class="head-img"src="images/ODSlogo.png" alt="HeaderLogo"/>
+    </div>
+    <div>
+      <h1 style="margin-top: -6vw; padding-bottom: 2.5vw; text-shadow: 2px 3px #0b0b0bbb;">Orbital Dynamic Solutions</h1> 
+    </div>
+</header>
+<!--Header ends here-->
+<!--Body starts here-->
+<body>
+</div> 
+<!--Navigation starts here-->
+<div class="nav" id="nav">
+    <span>
+    <div style="text-align: center;">
+      <nav class="navbar">
+        <div class="hamburger-menu">
+            <div class="bar"></div>
+            <div class="bar"></div>
+            <div class="bar"></div>
+        </div>
+      <ul class="nav-links" >
+        <li><a class="non" href="index.html" style="color: white;">Homepage</a> </li>
+        <li><a class="non" href="aboutus.html" style="color: white;">About Us</a> </li>
+        <li><a class="non" href="scope.html" style="color: white;">Project Scope</a> </li>
+        <li><a class="non" href="competition.html" style="color: white;">Competition</a> </li>
+        <li><a class="non" href="diagrams.html" style="color: white;">Diagrams</a> </li>
+        <li><a class="non" href="partners.html" style="color: white;">Partners</a> </li>
+        <li><a class="non" href="contactus.html" style="color: white;">Contact Us</a> </li>
+      </ul>
+    </div>
+    </span>
+</div>
+<!--Js to make nav scroll with page-->
+<!--Js toggle hamburger menu visibility-->
+<script>
+  window.onscroll = function() {myFunction()};
+  
+  var nav = document.getElementById("nav");
+  var sticky = nav.offsetTop;
+  
+  function myFunction() {
+    if (window.pageYOffset > sticky) {
+      nav.classList.add("sticky");
+    } else {
+      nav.classList.remove("sticky");
+    }
+  }
+
+  document.addEventListener('DOMContentLoaded', function() {
+    const hamburgerMenu = document.querySelector('.hamburger-menu');
+    const navLinks = document.querySelector('.nav-links');
+
+    hamburgerMenu.addEventListener('click', function() {
+        navLinks.classList.toggle('active');
+    });
+});
+</script>
+
+<!--Navigation ends here-->
+
+<!--Start of flexboxes to divide webpage-->
+<div class="flexbox">
+    <h2>Proposed Methodology</h2>
+    <h5>Deep-Space Exploration Methodology</h3>
+    <h4>
+    To hit our mission trajectory: We will leverage our simulation software to model multi-target, low-thrust trajectories using the propellant-less system, optimizing for minimal travel time and efficient planetary insertion without fuel.<br><br>
+
+    For instrument calibration: The magnetometer, gravimeter, and radio spectrum receiver will be calibrated against known celestial data as the spacecraft escapes Earth's gravity. This process ensures the accuracy of measurements taken in the unique conditions of deep space.<br><br>
+
+    For autonomous operations: We program on-board software to execute complex, pre-planned scientific observation sequences autonomously, as high latency prevents real-time control.<br><br>
+
+    To sustain long-duration communications: We will utilize Rocket Lab's global radio network to maintain intermittent communication over vast distances, downlinking data and uploading commands in scheduled windows.<br><br>
+
+    For performing multi-target manoeuvres: We will use the propellant-less system for precise orbital adjustments and transfers between targets, a capability enabled by the RTG power source and lack of propellant constraints.<br><br>
+    </h4>
+    <h5>Enhanced Earth Observation & Environmental Monitoring Methodology</h5>
+    <h4>We will configure the payload to integrate the Visible, Infrared, and Ultraviolet cameras onto a satellite bus optimized for Low Earth Orbit (LEO) with solar panel arrays for power.<br><br>
+
+    We will program the satellite for frequent, high-resolution imaging passes over designated areas of interest, using the combined spectral data to generate comprehensive environmental maps of the Earth allocated for specific target groups to study.<br><br>
+
+    To process this data: We will develop a robust ground-based software pipeline to process the large volume of data received from the satellite. This pipeline will automatically correct for atmospheric interference and produce useful findings for our customers.<br><br>
+
+    In case of natural disaster: We will establish a protocol with our Telemetry team to quickly re-task the satellite's cameras to capture imagery of natural disasters or other time-sensitive events.<br><br>
+
+    We will create a secure, user-friendly platform that allows our clients, such as government agencies and NGOs, to access and use the processed Earth observation data in near real-time.<br><br>
+    </h4>
+
+    <h5>Asteroid Metallic Composition Assessment Methodology</h5>
+    <h4>For target selection: We will use our simulation software to identify a target asteroid with a high probability of metallic content based on existing spectroscopic data. The propellant-less system allows for flexible mission planning to reach such a target.<br><br>
+
+    The mission requires us to design a precise trajectory for a low-speed rendezvous with the asteroid. We will use the propellant-less system to carefully match its velocity and approach it in a controlled and stable manner.<br><br>
+
+    For close-proximity operations: The satellite will perform a controlled, low-speed fly-by or “touch-and-go” maneuver. This proximity operation, which requires extremely precise control of the propulsion and attitude systems, will position the metal detector within its 1-meter operational range.<br><br>
+
+    For the In-situ data collection: We will execute a pre-planned sequence to activate the Metal Detector and collect a localized metal response reading, while simultaneously recording surface imagery and gravitational data to provide context of the asteroid's composition.<br><br>
+
+    We are mitigating the risk of impact by conducting extensive simulations and redundant testing of the proximity maneuver. As a key safety measure, our software and engineering teams will design and implement an automated collision avoidance system.
+    </h4>
+    <h2>Risks Identified</h2>
+    <h5>Technical Risks</h5>
+    <h4>Propellant-less propulsion system failure: The core of our innovation is a propellant-less system, a technology that is still considered experimental. The risk is that the system could fail to generate sufficient thrust, degrade over time in the harsh space environment, or malfunction entirely, rendering the satellite unable to perform its mission. This is the single biggest technical risk to our entire business model.<br><br>
+
+    Radiation hardening and space environment: Our satellites are designed for deep space, this exposes all components to high levels of radiation, which can cause component degradation, single-event effects like bit flips in electronics, and long-term functional failure. While we've taken measures, the risk remains that a critical component could fail, especially during a solar flare or coronal mass ejection.<br><br>
+
+    Payload component failure: The sophisticated scientific instruments, including the Dobsonian-equipped camera, magnetometers, and gravimeters, are highly sensitive. A failure in any one of these primary instruments could severely compromise the scientific return of a mission.<br><br>
+
+    Launch failure: Despite partnering with a reputable launch provider like Rocket Lab, rocket launches have an inherent risk of failure. A catastrophic launch vehicle failure would result in the complete loss of our satellite, its payload, and the significant financial investment in its design and fabrication.<br><br>
+
+    On-board software errors: A critical bug in the flight software could lead to a loss of control, an incorrect maneuver, or a failure to collect and transmit data. Since physical repairs are impossible, any necessary software patching in orbit is a complex and risky task.
+    </h4>
+    <h5>Financial Risks</h5>
+    <h4>
+      Funding and reputation: Because the process of designing and building interplanetary satellites is so expensive, we face significant risks related to funding. A single mission failure could be catastrophic to our finances and reputation, so we must be resilient against funding gaps, investment droughts, or the loss of a major contract to secure future investment.<br><br>
+
+      Mission cost overruns: Space missions often experience cost overruns because of unexpected technical challenges, supply chain delays, and testing failures. As a small company with a limited budget, we are particularly susceptible to these overruns, which could deplete our capital and delay or cancel future projects.<br><br>
+
+      Market and competition: The space industry is becoming increasingly competitive, with new players and well-established companies competing for contracts. A larger competitor could offer a similar product at a lower price or leverage their more extensive operational history, making it difficult for us to secure new business.<br><br>
+
+      Supply chain vulnerability: We are dependent on a complex, international supply chain for specialized, space-grade components, from the RTG to radiation-hardened electronics. Disruptions in this supply chain, due to geopolitical tensions, natural disasters, or supplier failures, could cause significant delays and cost increases.<br><br>
+    </h4>
+    <h5>Regulatory and Legal Risks</h5>
+    <h4>Payload permit revocation: Our authorization from the New Zealand government is subject to ongoing review and can be revoked based on national interest or security concerns. A change in government policy or a perceived security threat could lead to the suspension of our operations, even if our satellite is already in transit.<br><br>
+
+    Data and cybersecurity regulations: As a GBSI operator, we are subject to strict regulations regarding cybersecurity and data handling. A cyberattack on our ground station network or a data breach could result in severe penalties, fines, and a loss of public trust, in addition to compromising mission data.<br><br>
+
+    International law and geopolitics: To ensure the mission's legality and safety, we must consider the evolving framework of international space law. Changes in global treaties or geopolitical disputes could threaten our mission. We also need to secure international approval for our RTG and adhere to all global safety protocols.
+    </h4>
+    <h5>Operational Risks</h5>
+    <h4>Talent acquisition and retention: Our small team of 27 is our most valuable asset, the loss of a single key staff member is a major risk for our small company. The deep expertise of individuals like our Technical and Engineering Managers is essential for the success of our projects.<br><br>
+
+    Communication with distant satellites: Interplanetary communication involves significant time delays and requires highly reliable ground station infrastructure. A failure in our partner's(Rocket Lab) ground network or a communication outage could lead to a loss of control or a failure to receive critical mission data, potentially for months or years.<br><br>
+
+    RTG Handling and Safety: While an RTG is a reliable power source, it is also a radioactive material that requires extremely careful handling. An incident during ground transport, assembly, or launch could have severe safety and environmental consequences, as well as a devastating impact on our company's reputation and financial viability.
+    </h4>
+    <h2>Diagrams</h2>
+    <h4 class="hid">Scroll through a window into our matrices and diagrams</h4>
+    <iframe class="doc" src="https://docs.google.com/document/d/e/2PACX-1vRrFOv7I0L40PqRvudGGwk2uZfOTVjfAi4sYufuSlc4btlLt0KwX-dnwL7H7ukd_KdqBuIIK3F-GXRJ/pub?embedded=true"
+    frameborder="0"></iframe>
+    <!-- Gives user freedom to look at the document full of the diagrams -->
+     
+    <h4 style="margin-bottom: -2vw;">You can use the provided link to view the full document</h4>
+    <a class="linkeddoc" href="https://docs.google.com/document/d/e/2PACX-1vRrFOv7I0L40PqRvudGGwk2uZfOTVjfAi4sYufuSlc4btlLt0KwX-dnwL7H7ukd_KdqBuIIK3F-GXRJ/pub">Link to Diagrams</a>
+</div>
+</body>
+<!--Body ends here-->
+<!--Link to scroll you back to top of page-->
+<div style="text-align: center;">
+<!--Footer that travels with you at the bottom of page-->
+<footer>
+     <!-- Company Logo -->
+    <span style="float: left; margin-left:1vw;">
+        <img  class="footer-img" src="images/ODSlogo.png" alt="HeaderLogo"/>
+    </span>
+    <!-- Links column on the left -->
+    <div>
+        <ul class="footer-links">
+            <li><a href="references.html">References</a></li>
+            <li><a href="contactus.html">Contact Us</a></li>
+            <li><a href="aboutus.html">About Us</a></li>
+        </ul>
+    </div>
+    <!-- Links user back to the top of the page using the header -->
+    <div>
+        <a class="backtop" href="#header">Back to top</a>
+    </div>
+    <!-- Copyright on the right -->
+    <div style="display: flex; align-items: center; justify-content: flex-end;">
+        <span class="copyright">© Vince Vagay | 2025</span>
+    </div>
+</footer>
+
+</html>

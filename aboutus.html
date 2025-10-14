@@ -9,6 +9,11 @@
   <link rel="stylesheet" href="mystyle.css" type="text/css">
   <!-- Specific page styling -->
   <style>
+    /* Heading 2 */
+    h2{
+      text-align: center;
+      margin-left: 1.5vw;
+    }
     /* Heading 4 */
     h4{
         color: #F8FDFC;
@@ -17,10 +22,11 @@
         margin-top: 6vw;
         font-size: 1.5vw;
         margin-left: 44%;
+        padding-left: 0vw;
     }
-
+    /* Bold */
     b{
-      margin-left: -50vw;
+        margin-left: -50vw;
     }
 
     /* Unordered list within a flexbox */
@@ -33,13 +39,14 @@
 
     /* For the text in the list */
     .flexbox ul li{
-      margin-top: -1vw;
-      margin-left: -8.5vw;
-      font-size: 1.2vw;
+        margin-top: -1vw;
+        margin-left: -8.5vw;
+        font-size: 1.2vw;
     }
 
+    /* Heading 6 in flexbox */
     .flexbox h6{
-      margin-left: 20vw;
+        margin-left: 20vw;
     }
 
     /* For paragraphs within the flexbox */
@@ -48,6 +55,7 @@
         padding-top: 1vw;
         max-width: 38%;
     }
+
     /* For text in lists */
     .lists{
         display: flex;
@@ -60,30 +68,31 @@
         width: 70%;
     }
 
+    /* lists */
     .lists li {
         margin-bottom: 2vw;
     }
-
         
-    /* Alighment and sizing of company acronym */
+    /* Alignment and sizing of company acronym */
     .company {
-        font-size: 5vw; 
-        letter-spacing: 2.1vw;
+        font-size: 6vw; 
+        letter-spacing: 2vw;
         margin-top: -2vw; 
-        font-weight: 400; 
+        font-weight: 450; 
         justify-content: center;
         text-align: center;
         text-shadow: 2px 5px 10px black;
-        margin-bottom: -5vw;
+        margin-bottom: -8vw;
     }
+
     /* Description of Acronym */
     .desc{
-        margin-left: 5vw;
+        margin-left: 6vw;
     }
-      
+    
     /* For paragraphs in the list under the ODS*/
     .flexbox ul p{
-        font-size: 1vw;
+        font-size: 1.2vw;
         color: #ffffff;
         font-family: "Open Sans", sans-serif;
         font-weight: 300;
@@ -113,7 +122,7 @@
         box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2); /* Soft shadow */
         overflow: hidden; /* Ensures border-radius applies to children */
         height: 90%;
-        padding-bottom: 4vw;
+        padding-bottom: 0vw;
         margin-bottom: 2vw;
     }
 
@@ -139,6 +148,7 @@
         margin-top: -2vw;
         font-size: 1.5vw;
         font-weight: normal; /* Match the provided image's font weight */
+        padding-top: 3vw;
     }
     /* Details of Role */
     .person-card .details {
@@ -150,52 +160,11 @@
         max-width: 100%;
         padding-bottom: 4vw;
     }
-    .pad{
-      padding-top: 205vw;
-    }
-    /* Responsive adjustments for smaller screens */
-    @media (max-width: 768px) {
-        .grid-container {
-          grid-template-columns: repeat(2, 1fr); /* 2 columns on tablets */
-          padding-left: 3vw;
-          padding-top: 3vw;
-        }
-        .person-card{
-          max-width: 90%;
-          padding-bottom: 4vw;
-        }
-        .person-card h3 {
-          font-size: 1.5vw;
-          padding-left: 1vw;
-        }
-        .person-card .details {
-          font-size: 1vw;
-          line-height: 1.6;
-          padding-left: 2vw;
-        }
-        /* For the text in the list */
-        .flexbox ul li{
-          margin-top: -1vw;
-          margin-left: -4vw;
-          font-size: 1.9vw;
-        }
-        .lists{
-          width: 80%;
-        }
-        .desc{
-        margin-left: -4.9vw;
-        }
-        /* Alighment and sizing of company acronym */
-        .company {
-            font-size: 5vw;
-            letter-spacing: 2.9vw;
-            margin-left: 0vw;
-        }
-        .pad{
-          padding-top: 450vw;
-        }
-    }
 
+    .pad{
+      padding-top: -200vw;
+    }
+    /* For scaling on mobile */
     @media (max-width: 480px) {
         .grid-container {
           grid-template-columns: 1fr; /* Single column on mobile */
@@ -203,7 +172,7 @@
           padding-top: 5vw;
         }
         .person-card{
-          max-width: 100%;
+          max-width: 94%;
           margin-left: -6.5vw;
         }
         .person-card h3 {
@@ -228,7 +197,7 @@
         /* Alighment and sizing of company acronym */
         .company {
           font-size: 9vw; 
-          letter-spacing: 3.3vw;
+          letter-spacing: 3.7vw;
           margin-left: 0vw
         }
         /* Lists at the bottom of page # */
@@ -249,7 +218,7 @@
         /* The list under ODS */
         .flexbox ul li p{
           margin-top: -6vw;
-          font-size: 1.9vw;
+          font-size: 1.1em;
           max-width: 100%;
           padding-left: 12vw;
         }
@@ -259,7 +228,8 @@
           margin-right: -25vw;
         }
         .pad{
-          padding-top: 1070vw;
+          padding-top: 0vw;
+          margin-top: -5vw;
         }
       }
   </style>
@@ -327,24 +297,24 @@
     });
 });
 </script>
-<script src="parallax.js"></script>
 
 <!--Navigation ends here-->
 
+
 <!--Start of flexboxes to divide webpage-->
 <div class="flexbox" style="text-align: center;">
-    <h2>About Us</h2>
+    <h2 style="text-align: left; margin-left: 3vw;">About Us</h2>
     <div class="centre">
     <h3 style="font-weight: 500; text-align: center; margin-top: 5vw; margin-left: -3vw; text-decoration: none; font-size: 2.5vw; padding-bottom: 2vw;">
       Company Name</h3>
     <h2 class="company">O · D · S</h2>
     <ul class="desc">
-        <li><h4 style="margin-left: 10vw;">Orbital</h4>
-          <p style="margin-left: -2vw;">Directly relates to space, satellites, and celestial mechanics.</p></li>
-        <li><h4 style="margin-left: 12vw;">Dynamic</h4>
-          <p style="margin-left: -2vw;">Implies movement, change, and complex systems, fitting for simulations and adaptable designs.</p></li>
-        <li><h4 style="margin-left: 2.9vw;;">Solutions</h4>
-          <p style="margin-left: -9.4vw;">Positions the company as providing answers and practical applications for complex challenges.</p></li>
+        <li><h4 style="margin-left: 8.2vw;">Orbital</h4>
+          <p style="margin-left: -3.7vw; font-size: 0.8em;">Directly relates to space, satellites, and celestial mechanics.</p></li>
+        <li><h4 style="margin-left: 12.1vw;">Dynamic</h4>
+          <p style="margin-left: -1.5vw; font-size: 0.8em;">Implies movement, change, and complex systems, fitting for simulations and adaptable designs.</p></li>
+        <li><h4 style="margin-left: 4.7vw;;">Solutions</h4>
+          <p style="margin-left: -8vw; font-size: 0.8em;">Positions the company as providing answers and practical applications for complex challenges.</p></li>
     </ul>
     </div>
     <div>
@@ -411,11 +381,11 @@
     </div>
     <!-- Parallax Area -->
     <div class="parallax-section parallax1">
-        <h1 class="parallax-text"><span style="font-weight: 600;">Meet Our Satellite</span> <br> Orbital 1</h1>
+        <h1 class="parallax-text"><span style="font-weight: 500;">Meet Our Satellite</span> <br> Orbital 1</h1>
     </div>
 
-    <div class="content-section" style="background-attachment: fixed;">
-      <h3 style="font-weight: 500; text-align: center; margin-left: -4vw; margin-top: -2vw; text-decoration: none; font-size: 3.5vw;">
+    <div class="" style="background-attachment: fixed;">
+      <h3 style="font-weight: 500; text-align: center; margin-left: -4vw; margin-top: -2vw; text-decoration: none; font-size: 2.5em;">
         Satellite Instruments</h3>
       <h3 style="text-align: center; margin-left: -4vw;">Imaging & Sensing Modules</h3>
         <div class="grid-container">
@@ -654,7 +624,6 @@
             isolated environment.</li>
             </ul>
             <h5 style="margin-top: -3vw; margin-left: -17vw; padding-bottom: 2vw;">Data Processing & Simulation Hardware</h5>
-            <!-- <p style="max-width: 100%; font-size: 1.2vw; font-weight: 100; margin-left: -5vw; color: white"> -->
             <ul class="lists">
             <li>High-performance computing clusters (HPC): These powerful computer systems,
             equipped with specialized processors (CPUs and GPUs), are used for running complex
@@ -662,7 +631,7 @@
             computational fluid dynamics (CFD) for thermal modeling, and large-scale data processing
             for mission planning and post-mission analysis.</li>
             </ul>
-            <br><br><br><br>
+            <br>
     </div></div></div>
 </div>
 </body>
@@ -691,7 +660,6 @@
     <div style="display: flex; align-items: center; justify-content: flex-end;">
         <span class="copyright">© Vince Vagay | 2025</span>
     </div>
-</div>
 </footer>
 
 </html>
