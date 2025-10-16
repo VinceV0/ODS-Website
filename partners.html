@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+  <!--© Vince Vagay 30036567-->
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Partners</title>
+  <link rel="stylesheet" href="mystyle.css" type="text/css">
+  <style>
+    /* For list specific styling */
+    li{
+        padding: 1vw 0vw;
+        max-width: 110%;
+    }
+
+    .flexbox ul li{
+        font-size: 1.1em;
+        padding: 1vw 0vw;
+        max-width: 110%;
+    }
+
+    .flexbox ul{
+        padding-left: 13vw;
+    }
+    
+    /* Logos and headings of partners */
+    .flexbox .logo {
+        width: 20%;
+        height: auto;
+        min-width: unset;
+        max-height: unset;
+        margin-left: 75%;
+        padding: 3vw 0vw;
+        margin-top: 5vw;
+        margin-bottom: -5vw;
+        background-color: white;
+        border-radius: 1vw;
+    }
+    h3{
+        margin-top: -7vw;
+        padding-bottom: 8vw;
+    }
+  </style>
+</head>
+
+<!--Header contains logo and title-->
+<iframe src="background.html" style="padding-left: 0.05vw; border-color: #00000000;"></iframe>
+<header id="header" class="header">
+    <!--For title of page-->
+    <div>
+        <img class="head-img"src="images/ODSlogo.png" alt="HeaderLogo"/>
+    </div>
+    <div>
+      <h1 style="margin-top: -6vw; padding-bottom: 2.5vw; text-shadow: 2px 3px #0b0b0bbb;">Orbital Dynamic Solutions</h1> 
+    </div>
+</header>
+<!--Header ends here-->
+<!--Body starts here-->
+<body>
+</div> 
+<!--Navigation starts here-->
+<div class="nav" id="nav">
+    <span>
+    <div style="text-align: center;">
+      <nav class="navbar">
+        <div class="hamburger-menu">
+            <div class="bar"></div>
+            <div class="bar"></div>
+            <div class="bar"></div>
+        </div>
+      <ul class="nav-links" >
+        <li><a class="non" href="index.html" style="color: white;">Homepage</a> </li>
+        <li><a class="non" href="aboutus.html" style="color: white;">About Us</a> </li>
+        <li><a class="non" href="scope.html" style="color: white;">Project Scope</a> </li>
+        <li><a class="non" href="competition.html" style="color: white;">Competition</a> </li>
+        <li><a class="non" href="diagrams.html" style="color: white;">Diagrams</a> </li>
+        <li><a class="non" href="partners.html" style="color: white;">Partners</a> </li>
+        <li><a class="non" href="contactus.html" style="color: white;">Contact Us</a> </li>
+      </ul>
+    </div>
+    </span>
+</div>
+<!--Js to make nav scroll with page-->
+<!--Js toggle hamburger menu visibility-->
+<script>
+  window.onscroll = function() {myFunction()};
+  
+  var nav = document.getElementById("nav");
+  var sticky = nav.offsetTop;
+  
+  function myFunction() {
+    if (window.pageYOffset > sticky) {
+      nav.classList.add("sticky");
+    } else {
+      nav.classList.remove("sticky");
+    }
+  }
+
+  document.addEventListener('DOMContentLoaded', function() {
+    const hamburgerMenu = document.querySelector('.hamburger-menu');
+    const navLinks = document.querySelector('.nav-links');
+
+    hamburgerMenu.addEventListener('click', function() {
+        navLinks.classList.toggle('active');
+    });
+});
+</script>
+
+<!--Navigation ends here-->
+
+<!--Start of flexboxes to divide webpage-->
+<div class="flexbox" style="text-align: center;">
+    <h2 style="padding-bottom: 0vw;">Partners</h2>
+    <h4>
+      We've made a strategic decision to focus on our core expertise in satellite technology rather than developing our own launch vehicles. That's why a collaboration with an experienced launch provider is so crucial: with the aid of a joint venture, we want to put our satellite into orbit to send it on missions investigating the other planets in our local solar system. To achieve these ambitious mission goals, we're actively seeking partnerships for our satellite deployment.<br>
+    </h4>
+
+    <img src="images/rocketlabelaunch.webp" alt="Rocket Lab Launch">
+    <img class="logo" src="images/rocketlabllogo.png" alt="Rocket Lab Logo" style="padding: 0vw 0vw;">
+    <h3 style="padding-top: 3vw;">Rocket Lab</h3>
+      <h4>Rocket Lab, a New Zealand-based company with a proven track record of satellite launches, Rocket Lab offers a range of launch solutions and services primarily focused on the small to medium satellite market, with a key focus on precision and responsiveness. Rocket Lab also has strong ties to the United States, with its head office located there. They host a global network of radio telescope hardware and digital networks essential for sending and receiving radio frequency data from orbital and deep space missions.<br><br>
+      </h4>
+
+    <img src="images/yusenlogistics.jpg" alt="Yusen Logistics Warehouse">
+    <img class="logo" src="images/yusenlogisticslogo.png" alt="Yusen Logistics Logo">
+    <h3 style="padding-top: 4vw;">Yusen Logistics</h3>
+      <h4>Our project requires a highly specialized and secure logistics solution for the transportation of our satellite to the Rocket Lab launch site. Given the satellite's sensitive nature and high value, ensuring its safe and reliable delivery is paramount to the mission's success. To meet these critical requirements, we will partner with Yusen Logistics. <br><br>
+    </h4>
+
+    <img src="images/NZbeehive.jpg" alt="NZ Beehive">
+    <img class="logo" src="images/NZGovCOA.jpg" alt="NZ Governemnt Coat Of Arms">
+    <h3 style="padding-top: 4vw;">New Zealand Government</h3>
+    <h4>Operating orbital or deep space machinery requires governmental approval, to ensure safety, security, and compliance with international obligations. This comprehensive approval process is primarily overseen by the New Zealand Space Agency (NZSA), which operates under the Ministry of Business, Innovation and Employment (MBIE). <br><br><br><br></h4>
+</div>
+</body>
+<!--Body ends here-->
+<!--Link to scroll you back to top of page-->
+<div style="text-align: center;">
+<!--Footer that travels with you at the bottom of page-->
+<footer>
+     <!-- Company Logo -->
+    <span style="float: left; margin-left:1vw;">
+        <img  class="footer-img" src="images/ODSlogo.png" alt="HeaderLogo"/>
+    </span>
+    <!-- Links column on the left -->
+    <div>
+        <ul class="footer-links">
+            <li class="non"><a href="references.html">References</a></li>
+            <li class="non"><a href="contactus.html">Contact Us</a></li>
+            <li class="non"><a href="aboutus.html">About Us</a></li>
+        </ul>
+    </div>
+    <!-- Links user back to the top of the page using the header -->
+    <div>
+        <a class="backtop" href="#header">Back to top</a>
+    </div>
+    <!-- Copyright on the right -->
+    <div style="display: flex; align-items: center; justify-content: flex-end;">
+        <span class="copyright">© Vince Vagay | 2025</span>
+    </div>
+</footer>
+
+</html>

@@ -22,13 +22,13 @@
     /* Embeded Google Docs */
     .doc{
       max-width:200vw;
-      height:70vh;
-      padding-left: 4vw;
+      height:750em;
+      padding-left: 7vw;
       margin-right: 0vw;
       overflow-x: hidden;
       aspect-ratio: 10vw;
       /* margin-left: 1vw; */
-      padding-right: 1vw;
+      padding-right: 1em;
     }
     .linkeddoc{
        color: white;
@@ -39,10 +39,11 @@
     }
     .hid{
       margin-top: -1vw;
-      margin-bottom: 1vw;
+      margin-bottom: -5vw;
+      width: 100%;
     }
     /* The embeded diagrams don't play nice on small screens, so it's hidden */
-    @media (max-width: 480px) {
+    @media (max-width: 1200px) {
         .doc {
           display: none;
         }
@@ -193,13 +194,12 @@
     RTG Handling and Safety: While an RTG is a reliable power source, it is also a radioactive material that requires extremely careful handling. An incident during ground transport, assembly, or launch could have severe safety and environmental consequences, as well as a devastating impact on our company's reputation and financial viability.
     </h4>
     <h2>Diagrams</h2>
-    <h4 class="hid">Scroll through a window into our matrices and diagrams</h4>
+    <h4 class="hid">Scroll through our matrices and diagrams.</h4>
+    <!-- Gives user freedom to look at the document full of the diagrams -->
+    <h4 style="margin-bottom: -2vw;">You can use the provided link to view the full document.</h4>
+    <a class="linkeddoc" href="https://docs.google.com/document/d/e/2PACX-1vRrFOv7I0L40PqRvudGGwk2uZfOTVjfAi4sYufuSlc4btlLt0KwX-dnwL7H7ukd_KdqBuIIK3F-GXRJ/pub">Link to Diagrams</a>
     <iframe class="doc" src="https://docs.google.com/document/d/e/2PACX-1vRrFOv7I0L40PqRvudGGwk2uZfOTVjfAi4sYufuSlc4btlLt0KwX-dnwL7H7ukd_KdqBuIIK3F-GXRJ/pub?embedded=true"
     frameborder="0"></iframe>
-    <!-- Gives user freedom to look at the document full of the diagrams -->
-     
-    <h4 style="margin-bottom: -2vw;">You can use the provided link to view the full document</h4>
-    <a class="linkeddoc" href="https://docs.google.com/document/d/e/2PACX-1vRrFOv7I0L40PqRvudGGwk2uZfOTVjfAi4sYufuSlc4btlLt0KwX-dnwL7H7ukd_KdqBuIIK3F-GXRJ/pub">Link to Diagrams</a>
 </div>
 </body>
 <!--Body ends here-->
