@@ -1,14 +1,30 @@
 <!DOCTYPE html>
 <html lang="en">
   <!--© Vince Vagay-->
-  <!--This page is only here to hold a 360 Image-->
+  <!--This is dedicated for the header, utilizing 360 images and panning-->
   <head>
     <script src="aframe.min.js"></script>
   </head>
   <body>
 
+    <!-- <a-scene>
+      <a-sky src="images/360image.jpg" rotation="-1 270 3">
+      </a-sky>
+    </a-scene> -->
+    
+    <!-- Rotating Pan -->
     <a-scene xr-mode-ui="enabled: false" device-orientation-permission-ui="enabled: false">
-      <a-sky src="images/360image.jpg"></a-sky> 
+        <a-sky
+            src="images/360image.jpg" 
+            id="panning-sky"
+            
+            animation="property: rotation; 
+                       to: 360 360 360; 
+                       dur: 36000; 
+                       easing: linear; 
+                       loop: true;">
+        </a-sky>
+        <a-entity camera position="0 1 0"></a-entity>
     </a-scene>
   </body>
 </html>

@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+  <!--© Vince Vagay-->
+  <!--Allow the user to interact with a 360 image, utilizes device gyro if on mobile-->
+  <head>
+    <script src="aframe.min.js"></script>
+  </head>
+  <body>
+    <a-scene device-orientation-permission-ui="enabled: false">
+      <a-sky src="images/360image.jpg" rotation="-1 270 3" 
+            
+            animation="property: rotation; 
+                       to: 0 360 0; 
+                       dur: 100000; 
+                       easing: linear; 
+                       loop: false;">
+      </a-sky>
+    </a-scene>
+  </body>
+</html>

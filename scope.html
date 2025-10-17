@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+  <!--© Vince Vagay 30036567-->
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Project Scope</title>
+  <link rel="stylesheet" href="mystyle.css" type="text/css">
+  <style>
+        /* Heading 3 */
+        h3{
+            font-weight: 500; 
+            text-align: center; 
+            margin-top: 5vw; 
+            margin-left: -3vw; 
+            text-decoration: none; 
+            font-size: 2.5vw; 
+            padding-bottom: 1vw;
+
+        }
+        /* Centering */
+        .centered{
+            width: 100%; 
+            margin-top: -8vw;
+            margin-left: -2vw;
+        }
+        /* Heading 4 in centered content*/
+        .centered h4{
+            all:unset;
+            color: white;
+            text-align: center;
+            font-size: 2vw; 
+            text-decoration: underline;
+        }
+        /* Paragraphs in centered content*/
+        .centered p{
+            text-align: center;
+            width: 75%;
+            padding-left: 15%;
+            font-size: 1.2vw;
+            font-weight: 100;
+        }
+        .flexbox img{
+            width: 100%;
+            padding-left: 2vw;
+        }
+  </style>
+</head>
+
+<!--Header contains logo and title-->
+<iframe src="background.html" style="padding-left: 0.05vw; border-color: #00000000;"></iframe>
+<header id="header" class="header">
+    <!--For title of page-->
+    <div>
+        <img class="head-img"src="images/ODSlogo.png" alt="HeaderLogo"/>
+    </div>
+    <div>
+      <h1 style="margin-top: -6vw; padding-bottom: 2.5vw; text-shadow: 2px 3px #0b0b0bbb;">Orbital Dynamic Solutions</h1> 
+    </div>
+</header>
+<!--Header ends here-->
+<!--Body starts here-->
+<body>
+</div> 
+<!--Navigation starts here-->
+<div class="nav" id="nav">
+    <span>
+    <div style="text-align: center;">
+      <nav class="navbar">
+        <div class="hamburger-menu">
+            <div class="bar"></div>
+            <div class="bar"></div>
+            <div class="bar"></div>
+        </div>
+      <ul class="nav-links" >
+        <li><a class="non" href="index.html" style="color: white;">Homepage</a> </li>
+        <li><a class="non" href="aboutus.html" style="color: white;">About Us</a> </li>
+        <li><a class="non" href="scope.html" style="color: white;">Project Scope</a> </li>
+        <li><a class="non" href="competition.html" style="color: white;">Competition</a> </li>
+        <li><a class="non" href="diagrams.html" style="color: white;">Diagrams</a> </li>
+        <li><a class="non" href="partners.html" style="color: white;">Partners</a> </li>
+        <li><a class="non" href="contactus.html" style="color: white;">Contact Us</a> </li>
+      </ul>
+    </div>
+    </span>
+</div>
+<!--Js to make nav scroll with page-->
+<!--Js toggle hamburger menu visibility-->
+<script>
+  window.onscroll = function() {myFunction()};
+  
+//   STICKY DISABLED FOR THIS PAGE
+//   var nav = document.getElementById("nav");
+//   var sticky = nav.offsetTop;
+  
+//   function myFunction() {
+//     if (window.pageYOffset > sticky) {
+//       nav.classList.add("sticky");
+//     } else {
+//       nav.classList.remove("sticky");
+//     }
+//   }
+
+  document.addEventListener('DOMContentLoaded', function() {
+    const hamburgerMenu = document.querySelector('.hamburger-menu');
+    const navLinks = document.querySelector('.nav-links');
+
+    hamburgerMenu.addEventListener('click', function() {
+        navLinks.classList.toggle('active');
+    });
+});
+</script>
+
+<!--Navigation ends here-->
+
+<!--Start of flexboxes to divide webpage-->
+<div class="flexbox" style="text-align: center;">
+    <h2>Project Scope</h2>
+    
+    <div class="centered">
+        <h3 style="justify-content: center;">Objectives</h3>
+        <h4>Deep-space exploration</h4>
+            <p>Utilizing our propellant-less propulsion system to conduct extended missions to the moon, outer planets, asteroid belt, and beyond - collecting unprecedented data with our specialized scientific instruments (like Magnetometers, Gravimeters, Radio Spectrum Receivers). This opens up new avenues for understanding the solar system's origins, planetary composition, and the search for potential extraterrestrial life.
+            </p>
+        <iframe src="explore360.html" style=" padding: 2vw 0vw; margin-left: -6vw; border-color: #00000000; width: 128%; height: 32vw; zoom: 1.5;"></iframe>
+    </div>
+    <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+</div>
+</body>
+<!--Body ends here-->
+<!--Link to scroll you back to top of page-->
+<div style="text-align: center;">
+<!--Footer that travels with you at the bottom of page-->
+<footer>
+     <!-- Company Logo -->
+    <span style="float: left; margin-left:1vw;">
+        <img  class="footer-img" src="images/ODSlogo.png" alt="HeaderLogo"/>
+    </span>
+    <!-- Links column on the left -->
+    <div>
+        <ul class="footer-links">
+            <li><a href="references.html">References</a></li>
+            <li><a href="contactus.html">Contact Us</a></li>
+            <li><a href="aboutus.html">About Us</a></li>
+        </ul>
+    </div>
+    <!-- Links user back to the top of the page using the header -->
+    <div>
+        <a class="backtop" href="#header">Back to top</a>
+    </div>
+    <!-- Copyright on the right -->
+    <div style="display: flex; align-items: center; justify-content: flex-end;">
+        <span class="copyright">© Vince Vagay | 2025</span>
+    </div>
+</footer>
+
+</html>
