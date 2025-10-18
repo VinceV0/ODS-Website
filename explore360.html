@@ -1,19 +1,19 @@
 <!DOCTYPE html>
 <html lang="en">
   <!--© Vince Vagay-->
-  <!--Allow the user to interact with a 360 image, utilizes device gyro if on mobile-->
+  <!--Allow the user to interact with a 360 image, they can drag the image around-->
   <head>
     <script src="aframe.min.js"></script>
   </head>
   <body>
-    <a-scene device-orientation-permission-ui="enabled: false">
-      <a-sky src="images/360image.jpg" rotation="-1 270 3" 
+    <a-scene  xr-mode-ui="enabled: false" device-orientation-permission-ui="enabled: false">
+      <a-sky src="images/360image.jpg" rotation="180 90 180" 
             
             animation="property: rotation; 
-                       to: 0 360 0; 
-                       dur: 100000; 
+                       to:180 -270 -180; 
+                       dur: 36000; 
                        easing: linear; 
-                       loop: false;">
+                       loop: true;">
       </a-sky>
     </a-scene>
   </body>

@@ -297,12 +297,12 @@ footer{
 
 /*Header 360 Image JavaScript*/
 iframe{
-    zoom:1;
+    zoom:0.2;
     z-index: 1;
-    margin-left:-12px;
-    margin-top:-10px;
+    margin-left:-40px;
+    margin-top:-50px;
     width: 102%;
-    height: 13vw;
+    height: 70vw;
     overflow-x: hidden;
 }
 

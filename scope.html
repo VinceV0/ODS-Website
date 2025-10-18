@@ -12,23 +12,32 @@
         h3{
             font-weight: 500; 
             text-align: center; 
-            margin-top: 5vw; 
+            margin-top: 6vw; 
             margin-left: -3vw; 
             text-decoration: none; 
-            font-size: 2.5vw; 
-            padding-bottom: 1vw;
-
+            font-size: 3vw; 
+        }
+        /* Heading 5 */
+        h5{
+            all:unset;
+            color: #F8FDFC;
+            padding-left: 1vw;
+            font-size: 1.5vw;
+        }
+        /* Paragraphs */
+        p{
+            font-weight: 100;
         }
         /* Centering */
         .centered{
             width: 100%; 
             margin-top: -8vw;
-            margin-left: -2vw;
+            margin-left: 0vw;
         }
         /* Heading 4 in centered content*/
         .centered h4{
             all:unset;
-            color: white;
+            color: #F8FDFC;
             text-align: center;
             font-size: 2vw; 
             text-decoration: underline;
@@ -37,19 +46,95 @@
         .centered p{
             text-align: center;
             width: 75%;
-            padding-left: 15%;
-            font-size: 1.2vw;
-            font-weight: 100;
+            padding-left: 13%;
+            font-size: 1.4vw;
+            font-weight: 1;
+            padding-bottom: 0vw;
         }
         .flexbox img{
             width: 100%;
             padding-left: 2vw;
         }
+        /* For embeded iframes */
+        iframe{
+            all: unset;
+            width: 100%;
+        }
+        /* Embeded Google Docs */
+        .doc{
+            max-width:200%;
+            height:108em;
+            padding-left: 5vw;
+            margin-right: 0vw;
+            overflow-x: hidden;
+            aspect-ratio: 10vw;
+            padding-right: 9vw;
+        }
+        /* Alignment left */
+        .left{
+            padding-left: 5%;
+            width: 100%;
+            text-align: left;
+        }
+        .left h2{
+            margin-left: 1%;
+            padding-bottom: 1vw;
+        }
+        .left h4{
+            padding-left: 1vw;
+            margin-bottom: 0.5vw;
+        }
+        .left li{
+            color: #F8FDFC;
+            padding: 0.2vw 0vw;
+            font-size: 1.1vw;
+        }
+
+    iframe{
+      all:unset;
+      width: 100%;
+    }
+
+    /* For the linked document of Budget */
+    .linkeddoc{
+       color: white;
+       font-size: 2.5vw;
+       padding: 4vw 4vw;
+       width: 100%;
+       text-align: left;
+    }
+    /* The embeded diagrams don't play nice on small screens, so it's hidden */
+    @media (max-width: 1200px) {
+        .doc {
+          display: none;
+        }
+      }
+        /* Scaling on a smaller screen */
+        @media (max-width: 1200px) {
+            h3{
+                font-size: 4vw; 
+            }
+            .left li{
+                font-size: 2vw;
+            }
+            .centered p{
+                font-size: 1.7vw;
+            }
+            h5{
+                font-size: 2vw;
+            }
+        }
+        /* For scaling on mobile */
+        @media (max-width: 480px) {
+            .left li{
+                font-size: 1.8vw;
+            }
+        }
   </style>
 </head>
 
 <!--Header contains logo and title-->
-<iframe src="background.html" style="padding-left: 0.05vw; border-color: #00000000;"></iframe>
+<iframe src="background.html" style="padding-left: 0.05vw; border-color: #00000000; zoom:0.2; z-index: 1; margin-left:-40px; margin-top:-50px; width: 102%; height: 70vw; overflow-x: hidden;"></iframe>
 <header id="header" class="header">
     <!--For title of page-->
     <div>
@@ -90,17 +175,16 @@
 <script>
   window.onscroll = function() {myFunction()};
   
-//   STICKY DISABLED FOR THIS PAGE
-//   var nav = document.getElementById("nav");
-//   var sticky = nav.offsetTop;
+  var nav = document.getElementById("nav");
+  var sticky = nav.offsetTop;
   
-//   function myFunction() {
-//     if (window.pageYOffset > sticky) {
-//       nav.classList.add("sticky");
-//     } else {
-//       nav.classList.remove("sticky");
-//     }
-//   }
+  function myFunction() {
+    if (window.pageYOffset > sticky) {
+      nav.classList.add("sticky");
+    } else {
+      nav.classList.remove("sticky");
+    }
+  }
 
   document.addEventListener('DOMContentLoaded', function() {
     const hamburgerMenu = document.querySelector('.hamburger-menu');
@@ -116,16 +200,179 @@
 
 <!--Start of flexboxes to divide webpage-->
 <div class="flexbox" style="text-align: center;">
-    <h2>Project Scope</h2>
-    
     <div class="centered">
-        <h3 style="justify-content: center;">Objectives</h3>
-        <h4>Deep-space exploration</h4>
+        <h3 style="padding-top: 1.7em; padding-bottom: 1.3vw;">Objectives</h3>
+        <iframe src="explore360.html" style=" padding-top: 4em; padding-bottom: 1vw; margin-left: 0vw; border-color: #00000000; width: 99%; height: 30vw; zoom: 150%;"></iframe>
+        <h4>Deep-space Exploration</h4>
             <p>Utilizing our propellant-less propulsion system to conduct extended missions to the moon, outer planets, asteroid belt, and beyond - collecting unprecedented data with our specialized scientific instruments (like Magnetometers, Gravimeters, Radio Spectrum Receivers). This opens up new avenues for understanding the solar system's origins, planetary composition, and the search for potential extraterrestrial life.
+            <br><br></p>
+        <h4>Enhanced Earth Observation & Environmental Monitoring</h4>
+            <p>Deploying satellites with advanced Visible, Infrared, and Ultraviolet cameras to provide highly detailed and comprehensive data for climate change monitoring, natural resource management, disaster prediction and response, and urban planning.
+            <br><br></p>
+        <h4>Assessing the Metallic Composition of Asteroids</h4>
+            <p>By potentially utilizing the close-range Metal Detector, to assess the metallic composition of asteroids and other celestial bodies, laying groundwork for future resource extraction.
             </p>
-        <iframe src="explore360.html" style=" padding: 2vw 0vw; margin-left: -6vw; border-color: #00000000; width: 128%; height: 32vw; zoom: 1.5;"></iframe>
     </div>
-    <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+    <div class="left">
+        <h2>Project Scope</h2>
+        <p>Our company's core business is the specialized design, fabrication, and extensive testing of advanced robotic satellites for interplanetary exploration, leveraging unique propellant-less propulsion technology. Our product is a highly capable robotic satellite, designed to investigate other planets, moons, and asteroids across the solar system. Our key capability lies in our deep expertise across satellite technologies, from initial concept to rigorous pre-launch validation. Our technical capabilities, staffing, and equipment for this project are detailed in the company information section.<br><br>
+
+        We do not engage in rocket design or manufacturing, and we also do not handle the physical transportation of our satellites to launch sites. For launch services, we will strategically partner with specialized providers like <span style="text-decoration: underline;">Rocket Lab</span> - due to their history with interplanetary launches, the capability of their Neutron rocket for larger payloads, and their crucial global communication network, including radio telescope hardware, which is essential for deep space missions.<br><br>
+
+        Regarding the transportation of the satellite, we will use a specialized partner. They will be responsible for providing custom-fit, climate-controlled, and vibration-dampened containers to safely transport the satellite. This partner will also handle detailed logistics, and provide real-time tracking from our facility to Rocket Lab's launch site at the Māhia Peninsula. Our team will handle the packing of the satellite, as well as the unpacking and rebuilding once it arrives at the launch site.<br><br>
+
+        We have chosen  <span style="text-decoration: underline;">Yusen Logistics</span> as the primary shipping company to get our satellite(divided into large parts) safely and reliably transported to Rocket Lab's launch site.They have a dedicated aerospace allocation, which means they are not just a general freight company but one that understands the specific demands of this sector. They highlight their expertise in handling a wide range of aerospace-related transport capabilities.<br><br>
+
+        For transporting our RTG we need to contact the  <span style="text-decoration: underline;">Office of Radiation Safety</span> directly. As the regulatory body for New Zealand, they will provide a list of approved and licensed transport companies with the legal and technical capability to ship Class 7 radioactive materials.<br><br>
+
+        In terms of legal requirements, as the owner and operator of the robotic satellite, our company is legally required to obtain a Payload Permit from the  <span style="text-decoration: underline;">New Zealand government</span>, specifically the  <span style="text-decoration: underline;">Minister for Space</span> (administered by the <span style="text-decoration: underline">Ministry of Business, Innovation and Employment - MBIE)</span>, under the Outer Space and High-altitude Activities Act 2017. This is a crucial authorization that confirms our satellite's design is safe, its operations are responsible, and it aligns with both national interests and international space law. This includes providing an orbital debris mitigation plan.<br><br>
+
+        We must also secure Ground-Based Space Infrastructure (GBSI) Authorization for activities related to our satellite's communication, tracking, and control - ensuring robust cybersecurity and compliance with the Outer Space and High-altitude Activities Amendment Bill, which includes due diligence for partners like Rocket Lab. <br><br>
+
+        We are responsible for securing all necessary radio spectrum licenses from New Zealand's Radio Spectrum Management (RSM) for our satellite's communication frequencies, and establishing data sharing agreements with Rocket Lab to ensure secure, live data feeds from their network to our offices, while complying with New Zealand's Telecommunications Act.<br>
+        </p>
+        <h4>Why do we require a launch vehicle?</h4>
+        <div style="width: 80%; padding-left: 3vw;">
+            <li>Overcome Earth's gravity - Rockets provide the immense initial thrust necessary to escape Earth's powerful gravitational field.
+            </li>
+            <li>Penetrate the atmosphere - Rockets are designed to safely and efficiently travel through the dense layers of Earth's atmosphere.
+            </li>
+            <li>Achieve initial orbit - The launch vehicle's primary role is to carry our satellite hardware to Low Earth Orbit (LEO), typically at an altitude where atmospheric drag is negligible. Once in LEO, our propellant-less propulsion system can then activate, generate continuous thrust, and begin its autonomous journey to its designated mission trajectory, whether that's higher Earth orbit, Lunar orbit, or deep space.
+            </li>
+        </div>
+        <h4>Why do we require a designated time slot?</h4>
+        <div style="width: 93%; padding-left: 3vw;">
+            <p style="margin-left: -3vw; font-weight: 1;">Getting our satellite into its exact orbital path is incredibly precise. We need to hit a very specific inclination and altitude, or even line it up for a rendezvous point if in case the satellite needs re-entry(whether it's planned or an emergency). This means the launch must occur when Earth's rotation perfectly aligns with our desired trajectory, creating incredibly narrow “launch windows” that might only last minutes on certain days.<br><br>
+            Reserving these time slots are also critical for a few key reasons:
+            </p>
+            <div style="width: 80%;">
+            <li>Keeping everyone safe: We have to make sure the launch corridor is completely clear of all air and sea traffic. A set launch time lets us clear these areas and keep them safe throughout the launch.<br>
+            </li>
+            <li>Avoiding space collisions: Orbit's getting really crowded. A specific launch time ensures our path and initial orbit won't clash with existing satellites, space debris, or other planned launches.<br></li>
+            <li>Coordinating ground crews: Launching takes a large team of ground stations, tracking radars, and communication relays. A fixed time slot means all these crucial assets can be fully staffed, calibrated, and ready to go.<br></li>
+            <li>Logistical coordination: Launch providers manage incredibly tight schedules, managing multiple clients and their specific rockets. A firm time slot locks in our chosen launch vehicle and its pad, ensuring everything's ready for us.<br></li>
+            <li>Payload integration: Getting our satellite meticulously connected to the launch vehicle is a complex process that demands precise planning and a defined timeline. Every minute counts, and a set launch window helps us plan accordingly.<br></li>
+            <li>Weather conditions: Plays a huge role in any launch. Having a designated time slot allows us to plan for contingencies, giving us the flexibility to reschedule within acceptable windows if conditions are unfavourable, mitigating inherent risks and unpredictability.<br><br></li>
+            </div>
+        </div>
+        <h2>Opportunities Identified</h2>
+        <p><span style="text-decoration: underline">Advancing human knowledge:</span> The venture directly contributes to humanity's understanding of the cosmos. Data from the planetary science missions could help answer fundamental questions about the origins of our solar system, the composition of celestial bodies, and the potential for life beyond Earth.</p>
+
+        <p><span style="text-decoration: underline">Inspiration for a new generation:</span> Ambitious space ventures have a powerful effect on the public imagination. The success of such a mission can inspire a new generation of students to pursue careers in STEM(Science, Technology, Engineering, and Mathematics), ensuring a pipeline of future innovators and problem-solvers.</p>
+
+        <p><span style="text-decoration: underline">Environmental stewardship:</span> The Earth observation capabilities provide critical data for climate scientists, oceanographers, and ecologists. This data is essential for monitoring climate change, tracking pollution, managing natural resources, and responding to natural disasters, directly contributing to a healthier planet.</p>
+
+        <p><span style="text-decoration: underline">Job creation:</span> Developing and operating a venture of this complexity requires a highly skilled workforce, leading to the creation of high-paying jobs in engineering, data science, project management, and a variety of scientific fields.</p>
+
+        <p><span style="text-decoration: underline">New revenue streams:</span> The core benefit is the creation of new, high-value revenue streams through the sale of specialized data, mission contracts, and technology licensing. This positions the company to be a major player in the “New Space” economy.</p>
+
+        <p><span style="text-decoration: underline">Stimulating innovation:</span> The challenges of building and launching a deep-space satellite naturally drive innovation. The development of advanced materials, new propulsion systems, and sophisticated data analysis techniques can lead to patents, intellectual property, and technology that can be licensed to other industries.</p>
+
+        <p><span style="text-decoration: underline">International collaboration and diplomacy:</span> Partnering with research institutions and governments from around the world on scientific missions fosters international cooperation and builds diplomatic bridges. Space exploration has a history of uniting nations toward a common, peaceful goal.</p>
+
+        <p><span style="text-decoration: underline">Enabling future industries:</span> The venture acts as a critical enabler for the emerging space resource sector. By providing initial prospecting data, the company helps reduce the risk for upcoming asteroid mining and lunar extraction projects, which could one day provide vital resources for humanity.</p>
+
+        <p><span style="text-decoration: underline">Market leadership:</span> By being a first-mover in key areas such as deep space prospecting and innovative propulsion. This strategy will give us a strong competitive advantage and build a powerful brand reputation.</p>
+        <h2>Selling Points & Benefits</h2>
+        <h4>Advancing Scientific Knowledge and Understanding</h4>
+            <p>
+            Deep space exploration: Deeper insights into the formation of our solar system, the composition of distant celestial bodies, and the potential for life beyond Earth. Data from magnetometers, gravimeters, and radio spectrum receivers will enhance our understanding of planetary geophysics, magnetic fields, and atmospheric interactions on a universal scale.
+            </p>
+            <p>Enhance earth science: Our advanced Earth observational components (Visible, IR, UV cameras) provide richer, more diverse data streams, leading to:</p>
+            <div style="width: 80%; padding-left: 3vw;">
+                <li>Climate change monitoring: More precise tracking of environmental changes, glacier melt, sea levels, and atmospheric composition, informing climate models and mitigation strategies.
+                </li>
+                <li>Environmental protection: Better monitoring of deforestation, pollution, water quality, and biodiversity, supporting conservation efforts and sustainable resource management.
+                </li>
+                <li>Geological insights: Advanced imaging helps understand geological processes, tectonic plate movements, and the dynamics of Earth's surface.
+                </li>
+            </div>
+            <h4>Economic Growth and Innovation</h4>
+                <p><span style="text-decoration: underline">Improving technologies:</span> The challenges of satellite design and deep space exploration often lead to breakthroughs in materials science, electronics, software, and power generation that find applications in a multitude of industries on Earth(for example, advancing battery tech, sensors, discovering more durable materials, etc).
+                </p>
+                <p><span style="text-decoration: underline">Job Creation:</span> Our activities directly contribute to high-skill job creation in engineering, manufacturing, research, data science, and mission operations.</p>
+                <p><span style="text-decoration: underline">Commercial Opportunities in Space:</span></p>
+                    <div style="width: 80%; padding-left: 3vw;">
+                        <li>ISRU prospecting: Our metal detection capabilities for asteroids lay the groundwork for future in-situ resource utilization, which promises to significantly reduce the cost of space exploration and potentially unlock vast new economic resources in space. This could foster entirely new industries like asteroid mining and space manufacturing.</li>
+                        <li>Reduced mission costs (Long-term): While initial launch costs remain, our propellant-less system dramatically reduces the operational costs associated with fuel, enabling more frequent and longer-duration missions at a lower overall lifecycle cost.</li>
+                    </div>
+            <h4>Societal Benefits</h4>
+                <p><span style="text-align: left; text-decoration: underline">To Inspire and Educate:</span></p>
+                <p style="padding-left: 2vw; text-align: left;">ODS's activities are not merely about launching hardware into space; they are about expanding human knowledge, driving economic prosperity, enhancing global well-being, and inspiring the next generation.<br><br>Our ambitious deep space missions ignite a sense of wonder, encourage STEM pursuits, and drive technological innovations that directly benefit life on Earth.
+                </p><br>
+        <h2>Target Audience</h2>
+            <h5>There are many groups that can benefit from this joint venture:<br></h5>
+            <h4 style="margin-top: 1vw;"><span style="text-align: left; text-decoration: underline">Academic and research institutions:</span></h4>
+            <p>
+            Leading universities and research groups need a partner to build the advanced technology for their specialized scientific missions. We provide expertise in creating and integrating unique scientific instruments for their projects, whether they're studying Earth's atmosphere or exploring other planets and systems.<br><br>
+            </p>
+            <h4><span style="text-align: left; text-decoration: underline">Resource exploration companies:</span> </h4>
+            <p>Companies that want to mine asteroids or extract resources from the Moon need a durable and easy-to-maneuver spacecraft. We provide the specialized technology for these long trips, including a metal detector to help them find and survey potential mining sites.<br><br>
+            </p>
+            <h4><span style="text-align: left; text-decoration: underline">Space & Planetary Scientists:</span></h4>
+            <div style="width: 80%; padding-left: 3vw;">
+                <li>Planetary Scientists: They study celestial bodies to design missions and interpret data from our cameras, magnetometers, and radio spectrum.</li>
+                <li>Astrophysicists / Astronomers: For astronomical observations using our cameras and understanding the broader cosmic environment.</li>
+                <li>Astrobiologists: If missions search for life, they help select the best targets and interpret data from our sensors to find signs of past or present life.</li>
+                <li>Space Physicists / Heliophysicists: They study the Sun and its influence, analyzing magnetometer data, understanding space weather, and interpreting radio emissions generated by solar particle interactions.</li>
+            </div>
+            <h4><span style="text-align: left; text-decoration: underline">Earth & Environmental Scientists:</span></h4>
+            <div style="width: 80%; padding-left: 3vw;">
+                <li>Atmospheric Scientists / Climatologists: They study Earth's atmosphere and climate change, using our cameras for weather forecasting, climate modeling, and monitoring atmospheric composition and pollutants.</li>
+                <li>Oceanographers: They use our Earth observation camera data for sea surface temperatures, ocean currents, marine ecosystems, and sea ice, supporting oceanographic research and marine resource management.</li>
+                <li>Geologists / Geoscientists: Using our imaging capabilities, they analyze Earth's landforms, geological processes, and natural resources, monitoring volcanoes, seismic activity, and land-use changes.</li>
+                <li>Hydrologists: They study water distribution and movement, benefiting from our satellite data for monitoring droughts, floods, and water body levels.</li>
+                <li>Ecologists / Biologists: Our imaging data helps them track vegetation health, deforestation, biodiversity, and ecosystem changes globally.</li>
+            </div>
+            <h4><span style="text-align: left; text-decoration: underline">Interdisciplinary Scientists & Researchers:</span></h4>
+            <div style="width: 80%; padding-left: 3vw;">
+                <li>Optical Scientists / Physicists: Crucial for designing, calibrating, and optimizing our cameras and telescope systems, focusing on lens design, sensor characteristics, and image quality.</li>
+                <li>Quantum Physicists / Material Scientists: These experts research and develop fundamental technologies for our innovative propulsion and advanced materials.</li>
+                <li>Data Scientists / Data Analysts / Machine Learning Engineers: Essential for handling large data volumes, they develop algorithms for processing sensor data, apply machine learning for anomaly detection and autonomous operations, and develop data visualization tools.</li>
+                <li>Systems Scientists: Systems scientists ensure that all parts of a mission work together effectively. They create a unified plan that is both logical and achievable, often in close collaboration with engineers.</li>
+                <li>Mission/Project Scientists: Lead a mission's scientific goals. They act as the primary contact for the science team, guiding the project from its initial concept to the final analysis and publication of results.</li>
+            <br><br>
+            </div>
+            
+            <h2>How we will make money</h2>
+            <h4>Satellite as a Service (SataaS) / Data as a Service (DaaS):</h4>
+            <div style="width: 80%; padding-left: 3vw;">
+                <li>Selling data and insights: This is a primary revenue stream. The satellite's set of modules (Metal Detector, Gravimeter, Visible/IR/UV cameras, magnetometers, radio spectrum) collect valuable data. This data can be processed, analyzed, and sold as raw data to various target groups.
+                </li>
+                <li>Academic and research institutions: Licensing data for their studies, potentially for groundbreaking discoveries in planetary science, atmospheric studies, or Earth observation.
+                </li>
+                <li>Earth & environmental scientists: Selling data for weather forecasting, climate modeling, environmental monitoring (deforestation, pollution), geological surveys, oceanographic research, and hydrological studies.
+                </li>
+                <li>Subscription models: Offering ongoing access to data streams or analytical tools on a subscription basis.
+                </li>
+                <li>On-demand services: Allowing customers to request specific imaging or data collection for a fee.
+                </li>
+            </div>
+            <h4>Mission-Specific Contracts and Partnerships:</h4>
+            <div style="width: 80%; padding-left: 3vw;">
+                <li>Government grants and contracts: These contracts often cover the design, build, launch, and operation of the satellite for a defined mission objective. This is particularly relevant for planetary exploration or specialized Earth science missions.</li>
+                <li>Collaborative projects with academic institutions: Partnering with universities and researchers can allow us to secure funding such as research grants, and our company provides the specialized hardware, software, and expertise to execute the space segment of their research.</li>
+                <li>Commercial contracts for resource exploration: Offer reconnaissance and prospecting services to asteroid mining and lunar resource companies, compensated with equity.</li>
+            </div>
+            <h4>Technology Licensing and Development:</h4>
+            <div style="width: 80%; padding-left: 3vw;">
+                <li>Propellant-less propulsion system: If our innovative propulsion system is truly groundbreaking, we could license this technology to other space companies for their satellites or spacecraft, generating significant intellectual property revenue.</li>
+                <li>Specialized instrument sales: While the focus is on a full satellite, if certain instruments are highly advanced and modular, we could sell these as standalone payloads to other satellite manufacturers or research institutions.</li>
+                <li>Expertise and consulting: Offering consulting services based on our deep expertise in deep space navigation.</li>
+                <li>Licensing our software: Our in-house simulation and modelling software can be licensed to customers in order to model and simulate various scenarios for missions. We can use our simulation software to create and deliver training courses on space mission planning, orbital mechanics, and satellite operations.</li>
+            </div>
+            <h4>Future Opportunities:</h4>
+            <div style="width: 80%; padding-left: 3vw;">
+                <li>In-situ resource utilization(ISRU) support: As resource exploration companies mature, there will be demand for more advanced ISRU support, which could involve more specialized satellites or even direct involvement in resource extraction operations.</li>
+            </div>
+
+            <h2>Budget</h2>
+            <!-- Gives user freedom to look at the document full of the diagrams -->
+            <h4 style="margin-bottom: 2vw;">You can use the provided link to view the full document.</h4>
+            <a class="linkeddoc" href="https://docs.google.com/document/d/e/2PACX-1vQuhjRNlPReMKWJpz2Kcx0Zm-DI2d0oTZm8GXqjVHoyAFMa71K1BjjgTimoXvmGHVbzu5YFkptOQE3v/pub">Link to Budget</a>
+            <br><br>
+            <iframe class="doc" src="https://docs.google.com/document/d/e/2PACX-1vQuhjRNlPReMKWJpz2Kcx0Zm-DI2d0oTZm8GXqjVHoyAFMa71K1BjjgTimoXvmGHVbzu5YFkptOQE3v/pub?embedded=true"></iframe>
+    </div>
 </div>
 </body>
 <!--Body ends here-->
