@@ -341,7 +341,7 @@ iframe{
 }
 
 /*Website adjustment for small screens(Mobile)*/
-@media (max-width: 1000px) {
+@media (max-width: 900px) {
     /* Navigation bar changes dependant on screen size */
     .nav-links {
         display: none;
@@ -429,7 +429,7 @@ iframe{
     }
 }
 /* Footer and header sizing on small screen */
-@media (max-width: 1200px) {
+@media (max-width: 1000px) {
     h1{
         font-size: 5vw;
         margin-top: -20vw;
