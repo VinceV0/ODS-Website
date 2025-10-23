@@ -24,9 +24,11 @@ body{
     background-color: #000000;
     font-family: "Open Sans", sans-serif;
     background-image: url(images/StarrySky.png);
-    background-size:100em;
     background-repeat: repeat;
     overflow-x: hidden;
+    background-attachment: fixed; 
+    background-size: cover; 
+    background-position: center;
 }
 
 /*This header is on top of the 360 image, defines positioning*/
@@ -150,8 +152,11 @@ p{
     width: 80%;
     margin-left: 10%;
     margin-top: -0.3vw;
+    margin-bottom: -1vw;
     text-align: center;
     z-index: 2;
+    box-shadow: 0 5px 50px rgb(0, 0, 0);
+    background-image: linear-gradient(to bottom, transparent 90%, #19191986 100%);
 }
 
 /* Centering items within the flexbox */
@@ -340,6 +345,18 @@ iframe{
     margin-top: 0.4vw;
 }
 
+/* Earthspin iframe styling */
+.earthspin {
+    position: fixed;
+    top: 10vw;
+    padding-top: 43vw;
+    left: 32%;
+    width: 200vw;
+    height: 200vw;
+    z-index: -1;
+    border: none;
+}
+
 /*Website adjustment for small screens(Mobile)*/
 @media (max-width: 900px) {
     /* Navigation bar changes dependant on screen size */
@@ -395,7 +412,7 @@ iframe{
     /* The position of the sticky nav bar when scrolled */
     .sticky {
         position: fixed;
-        top: 1vw;
+        top: 0.9vw;
         margin-left: -1.7vw;
     }
     /* Changing the heading 2 */
@@ -426,6 +443,11 @@ iframe{
     iframe{
         width: 103%;
         overflow: hidden;
+    }
+    /* Spinning Earth */
+    /* Earthspin iframe styling */
+    .earthspin {
+        padding-top: 100vw;
     }
 }
 /* Footer and header sizing on small screen */
@@ -537,6 +559,4 @@ iframe{
     font-family: "Zalando Sans", sans-serif;
     font-weight: 300;
 }
-
-/* Content Section Styling */
 

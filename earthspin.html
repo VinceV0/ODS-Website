@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<!-- The Earth Spinning is NOT MY CODE -->
+<!-- https://codepen.io/emilygoldfein 
+     https://codepen.io/emilygoldfein/pen/wePYYL  
+     Courtesty of: @emilygoldfein
+-->
+<!-- Page to hold Earth Spinning JavaScript -->
+ 
+<!-- Satellites in Orbit are by Vince Vagay -->
+<!-- Editted using Google Gemini 2.5 Flash-->
+<html>
+<head>
+    <title>Rotating Earth (Three.js)</title>
+
+    <script src="three.min.js"></script>
+    
+    <style>
+        body {
+            margin: 0;
+            overflow: hidden; /* Hide scrollbars if any */
+        }
+        canvas {
+            width: 100vw;
+            height: 100vh;
+            display: block; /* Removes any extra space below the canvas */
+        }
+    </style>
+</head>
+<body>
+    <canvas id="canvas" width="100%" height="100%"></canvas>
+
+    <script>
+        var camera, scene, renderer;
+        var mesh;
+
+        init();
+        animate();
+
+        function init() {
+            // Initialize the WebGL renderer and connect it to the canvas element
+            renderer = new THREE.WebGLRenderer({
+                canvas: document.querySelector("#canvas"),
+                // CHANGE 1: Set alpha to true to enable transparency in the canvas context
+                alpha: true 
+            });
+            // Setup the perspective camera
+            camera = new THREE.PerspectiveCamera(70, 1, 1, 100);
+            camera.position.z = 25;
+
+            // Create the scene
+            scene = new THREE.Scene();
+
+            // Create the spherical geometry and material (using the image map)
+            var geometry = new THREE.SphereGeometry(10, 100, 100);
+            var material = new THREE.MeshPhongMaterial();
+
+            // Load the Earth texture map
+            THREE.ImageUtils.crossOrigin = '';
+            // NOTE: The map URL uses http, which may be blocked by modern browsers (mixed content error). 
+            // You may need to host this image or find an equivalent secure (https) texture.
+            material.map = THREE.ImageUtils.loadTexture('images/earth.png')
+
+            // Create the mesh (the Earth) and add it to the scene
+            mesh = new THREE.Mesh(geometry, material);
+            mesh.rotation.x += 0.3;
+            scene.add(mesh);
+
+            // Add an ambient light source
+            var light1 = new THREE.AmbientLight( 0xffffff );
+            light1.position.set(100, 50, 100);
+            scene.add(light1);
+        }
+
+        // Function to handle window resizing to keep the scene proportional
+        function resize() {
+            var width = renderer.domElement.clientWidth;
+            var height = renderer.domElement.clientHeight;
+            renderer.setSize(width, height, false);
+            camera.aspect = width / height;
+            camera.updateProjectionMatrix(); 
+        }
+
+        // The main animation loop (called at the screen's refresh rate)
+        function animate() {
+            resize(); // Check and adjust size every frame
+            mesh.rotation.y += 0.007; // Rotate the mesh on the Y-axis
+            mesh.rotation.y += 0.001; // Rotate the mesh on the X-axis
+            renderer.render(scene, camera); // Render the scene
+            requestAnimationFrame(animate); // Request the next frame
+        }
+        
+    </script>
+</body>
+</html>

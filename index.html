@@ -7,6 +7,36 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Homepage</title>
   <link rel="stylesheet" href="mystyle.css" type="text/css">
+  <!-- Specific page styling -->
+  <style>
+    /* For the Abstract section */
+    .abstract{
+        margin-left: -3vw; 
+        width: 120%; 
+        height: 60vh; 
+        background-size: cover; 
+        background-position: center; 
+        background-attachment: fixed; 
+        display: flex; 
+        flex-direction: column; 
+        justify-content: center; 
+        align-items: center; 
+        color: white; 
+        text-align: center; z-index: 5;
+        background-image: url(images/StarrySky.png); 
+        box-shadow: 0 5px 50px rgb(0, 0, 0);
+    }
+    /* Mobile Scaling */
+    @media (max-width: 1000px) {
+      .abstract{
+        height: 20vh; 
+      }
+      .earthspin{
+        padding-top: 150vh;
+        margin-left: -30vw;
+      }
+    }
+  </style>
 </head>
 
 <!--Header contains logo and title-->
@@ -22,7 +52,7 @@
 </header>
 <!--Header ends here-->
 <!--Body starts here-->
-<body>
+<body style="background-image: url('images/StarrySky.png'); background-attachment: fixed; background-size: cover; background-position: center;">
 </div> 
 <!--Navigation starts here-->
 <div class="nav" id="nav">
@@ -30,9 +60,12 @@
     <div style="text-align: center;">
       <nav class="navbar">
         <div class="hamburger-menu">
-            <div class="bar"></div>
-            <div class="bar"></div>
-            <div class="bar"></div>
+            <p style="margin-left: 3vw; margin-top: -0.3vw;">Menu</p>
+            <div style="margin-top: -3.4vw;">
+              <div class="bar"></div>
+              <div class="bar"></div>
+              <div class="bar"></div>
+            </div>
         </div>
       <ul class="nav-links" >
         <li><a class="non" href="index.html" style="color: white;">Homepage</a> </li>
@@ -71,16 +104,37 @@
     });
 });
 </script>
-
 <!--Navigation ends here-->
 
-<!--Start of flexboxes to divide webpage-->
-<div class="flexbox" style="text-align: center;">
-    <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
-    <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+<!-- Abstract section -->
+<div class="flexbox abstract">
+    
+    <h3 style="margin: 0; padding-bottom: 2vw; font-size: 3vw; font-family: Calibri; font-weight: bold; z-index: 5; margin-left: -17vw;">ABSTRACT</h3>
+    <p style="margin: 1vw 0 0 0; font-size: 1.3vw; max-width: 50%; text-align: justify; word-spacing: 0.1em; z-index: 5; margin-left: -2vw;">This joint project proposal details the development and mission of a robotic satellite designed for interplanetary exploration. The satellite, developed and fabricated by ODS, is distinguished by its propellant-less propulsion system and a suite of advanced scientific instruments. The mission's objectives include demonstrating a long-duration, multi-target exploration capability and collecting unprecedented data on celestial bodies. The satellite's launch will be managed by our strategic partner, Rocket Lab, following rigorous pre-launch testing and government authorization. Successful mission execution will validate a new era of cost-effective, long-term space missions and provide invaluable scientific data to the global community.</p>
+    <br><br>
 </div>
-<!--Each section follows the same uniformity: image on left, heading on right, text on Right below heading-->
-<div class="flexbox" style="text-align: center;">
+
+<!-- Spinning Earth JS -->
+<iframe src="earthspin.html" class="earthspin"></iframe>
+
+
+<!--Start of flexboxes to divide webpage-->
+<div class="flexbox" style="text-align: center; position: relative; z-index: 2; margin-top: 50%;">
+  <h2 style="padding-top: 5vw; margin-bottom: -1vw ;padding-left: 3vw;">Introduction</h2>  
+  <p style="padding-left: 5.5vw; width: 80%;">
+      The next frontier of space exploration is not just about reaching new destinations, but about staying there for extended, multi-target missions. This project, a groundbreaking venture into interplanetary exploration, aims to redefine mission longevity and scientific return. 
+      <br><br>
+
+      We're developing a robotic satellite designed to venture beyond Earth's gravitational confines for years, fueled by a revolutionary propellant-less propulsion system. Our objectives are to gather unprecedented data from celestial bodies and advance our understanding of the solar system's origins, all while proving the viability of this next-generation technology.
+      <br><br>
+
+      Traditional deep-space missions are severely limited by the need for chemical fuel, restricting their duration and the number of celestial bodies they can explore. Our project provides a game-changing solution: a robotic satellite that uses an innovative, propellant-less propulsion system. By continuously generating thrust without consuming fuel, our satellite can achieve missions of unprecedented length and flexibility, opening up new possibilities for exploring the outer solar system.
+      <br><br>
+
+      The impact of this project will be profound, ushering in a new era of space exploration. It will not only deliver unprecedented scientific data on planetary composition, gravitational fields, and potentially metallic asteroid resources, but also establish a proven, cost-effective model for long-duration space missions. This venture will significantly advance humanity's understanding of the cosmos, open new avenues for resource utilization, and solidify our position as a leader in innovative space technology.
+      <br><br><br><br>
+    </p>
+</div>
 </div>
 </body>
 <!--Body ends here-->
