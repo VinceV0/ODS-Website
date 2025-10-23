@@ -26,14 +26,66 @@
         background-image: url(images/StarrySky.png); 
         box-shadow: 0 5px 50px rgb(0, 0, 0);
     }
+    .TCount{
+       position: absolute; 
+       top: 110%; 
+       left: 50%; 
+       transform: translate(-50%, -50%); 
+       text-align: center;
+    }
+    /* Contains the timer styling */
+    .container{
+        margin: auto;
+        background: white;
+        padding: 20px;
+        border-radius: 8px;
+        box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+    #countdown {
+        text-align: center;
+        margin-top: 15vw; 
+    }
+    #timer {
+        font-family: 'Orbitron', sans-serif;
+        margin: 20px 0;
+        display: flex;
+        justify-content: center;
+        gap: 0.5em;
+    }
+    .time-unit {
+        text-align: center;
+    }
+    .number {
+        font-size: 3vw;
+        font-weight: bold;
+        color: #ffffff;
+    }
+    .label {
+        font-size: 1.5vw;
+        font-weight: bold;
+        color: #F8FDFC;
+        margin-top: 5px;
+    }
     /* Mobile Scaling */
     @media (max-width: 1000px) {
       .abstract{
         height: 20vh; 
+        box-shadow: 0 0px 0px rgba(0, 0, 0, 0);
       }
       .earthspin{
-        padding-top: 150vh;
-        margin-left: -30vw;
+        padding-top: 170vh;
+        margin-left: -20vw;
+      }
+      .TCount{
+        position: absolute; 
+        top: 30%; 
+      }
+      .container{
+        top: 10%;
+      }
+      #countdown {
+          text-align: center;
+          margin-top: -8vw; 
       }
     }
   </style>
@@ -106,6 +158,8 @@
 </script>
 <!--Navigation ends here-->
 
+<script src="timer.js"></script>
+
 <!-- Abstract section -->
 <div class="flexbox abstract">
     
@@ -113,6 +167,35 @@
     <p style="margin: 1vw 0 0 0; font-size: 1.3vw; max-width: 50%; text-align: justify; word-spacing: 0.1em; z-index: 5; margin-left: -2vw;">This joint project proposal details the development and mission of a robotic satellite designed for interplanetary exploration. The satellite, developed and fabricated by ODS, is distinguished by its propellant-less propulsion system and a suite of advanced scientific instruments. The mission's objectives include demonstrating a long-duration, multi-target exploration capability and collecting unprecedented data on celestial bodies. The satellite's launch will be managed by our strategic partner, Rocket Lab, following rigorous pre-launch testing and government authorization. Successful mission execution will validate a new era of cost-effective, long-term space missions and provide invaluable scientific data to the global community.</p>
     <br><br>
 </div>
+
+<div class="TCount">
+  <!-- T-Counter Countdown -->
+  <h2 style="font-size: 2.5vw; text-align: center; margin-left: 0vw;">TIME UNTIL LAUNCH</h2></div>
+        <!-- Clear labels have been used under the unit of time counters -->
+        <div id="countdown">
+            <div id="timer">
+                <div class="time-unit">
+                    <div id="months" class="number">0</div>
+                    <div class="label">MONTHS</div>
+                </div>
+                <div class="time-unit">
+                    <div id="days" class="number">0</div>
+                    <div class="label">DAYS</div>
+                </div>
+                <div class="time-unit">
+                    <div id="hours" class="number">00</div>
+                    <div class="label">HOURS</div>
+                </div>
+                <div class="time-unit">
+                    <div id="minutes" class="number">00</div>
+                    <div class="label">MINUTES</div>
+                </div>
+                <div class="time-unit">
+                    <div id="seconds" class="number">00</div>
+                    <div class="label">SECONDS</div>
+                </div>
+            </div>
+        </div>
 
 <!-- Spinning Earth JS -->
 <iframe src="earthspin.html" class="earthspin"></iframe>
