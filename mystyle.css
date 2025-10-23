@@ -1,3 +1,4 @@
+/* Styling by Vince Vagay */
 /* Rubik */
 @import url('https://fonts.googleapis.com/css2?family=Kaushan+Script&family=Roboto:wght@300&family=Rubik&family=Source+Sans+Pro&display=swap');
 /* Orbitron */
@@ -20,6 +21,7 @@ html {
 
 /* Body image as a Starry Night Sky */
 /* Repeated so it's more high resolution with scaling */
+/* Image was created by Vince Vagay by placing white dots on a black background and repeating the image to become high resolution */
 body{
     background-color: #000000;
     font-family: "Open Sans", sans-serif;
@@ -508,7 +510,7 @@ iframe{
         margin-top: 0.5vw;
     }
 }
-
+/* For small screens like mobile */
 @media (max-width: 480px) {
     body {
         overflow-x: hidden;
@@ -563,19 +565,4 @@ iframe{
     margin-bottom: 3vw;
     font-family: "Zalando Sans", sans-serif;
     font-weight: 300;
-}
-/* First satellite */
-/* Planet Earth */
-.planet {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    width: 200px;
-    height: 200px;
-    background-image: url("https://upload.wikimedia.org/wikipedia/commons/2/22/Earth_Western_Hemisphere_transparent_background.png");
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center;
-    border-radius: 50%;
-    transform: translate(-50%, -50%);
 }
