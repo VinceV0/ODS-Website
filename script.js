@@ -9,7 +9,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const satellite2 = document.querySelector('.satellite2');
     const satellite3 = document.querySelector('.satellite3');
     
-    // 'Radius' isn't a great name, but I was messing it them to set the distances to creat an elipse-like orbit
+    // 'Radius' isn't a great name, but I was messing it them to set the distances to create an elipse-like orbit
 
     const radius1 = 1200; // The distance from the center of the planet to the first satellite
     const radius2 = 500; // Second radius for first satellite
