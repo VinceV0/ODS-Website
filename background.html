@@ -2,17 +2,24 @@
 <html lang="en">
   <!--© Vince Vagay-->
   <!--This is dedicated for the header, utilizing 360 images and panning-->
+  <!--Gyro Enabled on Mobile Phones-->
+
+  <!--Reference: https://www.htmlgoodies.com/html/adding-a-360-image-in-a-web-based-a-frame-vr-solution/ -->
+
+  <!-- Image Used: https://www.google.com/imgres?imgurl=https%3A%2F%2Fcdn.eso.org%2Fimages%2Flarge%2Feso0932a.jpg&tbnid=G3xLxZIMQGCD1M&vet=1&imgrefurl=https%3A%2F%2Fwww.eso.org%2Fpublic%2Fimages%2Feso0932a%2F&docid=EvOYUYgsTjxNsM&w=6000&h=3000&source=sh%2Fx%2Fim%2Fm1%2F1&kgs=b1d5990136359966&shem=isst -->
   <head>
     <script src="aframe.min.js"></script>
   </head>
   <body>
+    <!-- Old initial code -->
 
     <!-- <a-scene>
       <a-sky src="images/360image.jpg" rotation="-1 270 3">
       </a-sky>
     </a-scene> -->
     
-    <!-- Rotating Pan -->
+    <!-- Rotating Pan, Google Gemini helped me animate the pan from xyz co-ordinates-->
+    <!-- Pan loops indefinitely -->
     <a-scene xr-mode-ui="enabled: false" device-orientation-permission-ui="enabled: false">
         <a-sky
             src="images/360image.jpg" 

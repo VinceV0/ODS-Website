@@ -2,6 +2,7 @@
 // Vince Vagay 30036567
 // Reference used from w3schools JavaScript Tutorial: 
 // https://www.w3schools.com/howto/howto_js_countdown.asp
+// Google's Gemini has been used to clean up the code
 
 document.addEventListener('DOMContentLoaded', function() {
     // Points toward the timer and status element in the HTML
@@ -11,7 +12,7 @@ document.addEventListener('DOMContentLoaded', function() {
     // Set target date to 5 months and 25 days from now - This is just for example purposes
     // Whenever the page reloads it defaults to these values
     const now = new Date();
-    const targetDate = new Date(now.getTime() + (5 * 30 * 24 * 60 * 60 * 1000) + (25 * 24 * 60 * 60 * 1000));
+    const targetDate = new Date(now.getTime() + (5 * 30 * 24 * 60 * 60 * 1000));
 
     // Updates the countdown timer display every second
     function updateTimer() {

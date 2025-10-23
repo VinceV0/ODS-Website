@@ -1,6 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
   <!--© Vince Vagay 30036567-->
+  <!-- This the the main landing/homepage of the website -->
+  <!-- Displays the abstract, intro, and JavaScript elements for satellites orbiting Earth -->
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -26,6 +28,8 @@
         background-image: url(images/StarrySky.png); 
         box-shadow: 0 5px 50px rgb(0, 0, 0);
         padding-bottom: 2vw;
+        padding-top: 5vw;
+        margin-top: -5vw;
     }
     /* Coundown Timer */
     .TCount{
@@ -43,13 +47,14 @@
         border-radius: 8px;
         box-shadow: 0 0 10px rgba(0,0,0,0.1);
     }
+    /* For countdown timer */
     #countdown {
         text-align: center;
-        margin-top: 15vw; 
+        margin-top: 12vw; 
     }
+    /* Number and lettering styling */
     #timer {
         font-family: 'Orbitron', sans-serif;
-        margin-top: 10vw;
         display: flex;
         justify-content: center;
         gap: 5vw;
@@ -169,6 +174,9 @@
 </script>
 <!--Navigation ends here-->
 
+<!-- Created a timer by Vince Vagay -->
+<!-- Resource: https://www.w3schools.com/howto/howto_js_countdown.asp -->
+<!-- BlackBoxAI used to assist -->
 <script src="timer.js"></script>
 
 <!-- Abstract section -->
@@ -178,8 +186,8 @@
     <p style="margin: 0vw 0 0 0; font-size: 1.3vw; max-width: 50%; text-align: justify; word-spacing: 0.1em; z-index: 5;">This joint project proposal details the development and mission of a robotic satellite designed for interplanetary exploration. The satellite, developed and fabricated by ODS, is distinguished by its propellant-less propulsion system and a suite of advanced scientific instruments. The mission's objectives include demonstrating a long-duration, multi-target exploration capability and collecting unprecedented data on celestial bodies. The satellite's launch will be managed by our strategic partner, Rocket Lab, following rigorous pre-launch testing and government authorization. Successful mission execution will validate a new era of cost-effective, long-term space missions and provide invaluable scientific data to the global community.</p>
 </div>
 
+<!-- T-Counter Countdown -->
 <div class="TCount" style="padding-bottom: 0vw;">
-  <!-- T-Counter Countdown -->
   <h2 style="font-size: 2.5vw; text-align: center; margin-left: 0vw; padding-bottom: -1vw;">TIME UNTIL LAUNCH</h2></div>
         <!-- Clear labels have been used under the unit of time counters -->
         <div id="countdown">
@@ -208,8 +216,10 @@
         </div>
 
 <!-- Spinning Earth JS -->
+<!-- Earth Spinning used external code -->
+<!-- Vince Vagay made the satellites orbit the spinning earth -->
+<!-- BlackBoxAI Google Gemini assisted in troubleshooting -->
 <iframe src="earthspin.html" class="earthspin"></iframe>
-
 
 <!--Start of flexboxes to divide webpage-->
 <div class="pad">
