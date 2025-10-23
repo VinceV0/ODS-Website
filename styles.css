@@ -1,0 +1,55 @@
+/* This styling is specifically for the Satellite Orbit Javascript Demo*/
+body {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-image: url(stars-2.jpg);
+}
+
+/* First satellite */
+.satellite1 {
+    position: absolute;
+    background-image: url("images/sat2.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    top: 50%;
+    left: 50%;
+    width: 10em;
+    height: 10em;
+    transform-origin: 0 0;
+    transform: translate(-50%, -50%);
+}
+
+/* Second satellite */
+.satellite2 {
+    position: absolute;
+    background-image: url("images/sat2.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    top: 50%;
+    left: 50%;
+    width: 10em;
+    height: 10em;
+    transform-origin: 0 0;
+    transform: translate(-50%, -50%);
+}
+
+/* Third satellite */
+.satellite3 {
+    position: absolute;
+    background-image: url("images/sat2.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    top: 50%;
+    left: 50%;
+    width: 10em;
+    height: 10em;
+    transform-origin: 0 0;
+    transform: translate(-50%, -50%);
+}
