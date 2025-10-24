@@ -77,11 +77,24 @@
             padding-bottom: 1vw;
         }
         
+
+        .form-group input[type="text"],
+        .form-group input[type="email"],
+        .form-group textarea {
+            width: 100%;
+            max-width: 20em;
+            padding: 12px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            font-size: 16px;
+            box-sizing: border-box; /* Include padding and border in the element's total width */
+        }
+
         /* For scaling on mobile */
-        @media (max-width: 480px) {
+        @media (max-width: 500px) {
             .desc{
                 gap: 3vw;
-                margin-left: -11vw;
+                margin-left: -9vw;
                 margin-top: -9vw;
             }
             .flexbox .logo{
@@ -99,6 +112,12 @@
             label{
                 font-size: 5vw;
             }
+            .form-group input[type="text"],
+            .form-group input[type="email"],
+            .form-group textarea {
+                width: 90%;
+                max-width: 20em;
+            }
         }
         /* Form styling */
         .form-group {
@@ -111,18 +130,6 @@
             margin-bottom: 8px;
             color: #F8FDFC;
             font-weight: 500;
-        }
-
-        .form-group input[type="text"],
-        .form-group input[type="email"],
-        .form-group textarea {
-            width: 100%;
-            max-width: 20em;
-            padding: 12px;
-            border: 1px solid #ddd;
-            border-radius: 5px;
-            font-size: 16px;
-            box-sizing: border-box; /* Include padding and border in the element's total width */
         }
 
         .form-group textarea {
