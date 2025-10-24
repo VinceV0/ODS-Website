@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+  <!--© Vince Vagay 30036567-->
+  <!-- This page represents a blank page used a skeleton for the strucutre of all pages -->
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=0.8, maximum-scale=0.8, user-scalable=no">
+  <title>Reference</title>
+  <link rel="stylesheet" href="mystyle.css" type="text/css">
+  <!-- Page specific Styling for the embed -->
+   <style>
+    /* Heading 5 */
+    h5{
+        all:unset;
+        margin-bottom: 0vw;
+        padding-left: 4vw;
+        font-size: 2vw;
+        font-weight: 1;
+        max-width: 75vw;
+        color: white;
+        text-decoration: underline;
+    }
+
+    /* iframes are clashing */
+    .flexbox iframe{
+      all:unset;
+      width: 100%;
+      height: 700vh;
+      overflow-y: hidden;
+      padding-left: 8vw;
+    }
+
+    /* Embedded Google Docs */
+    .doc{
+      padding-left: 9vw;
+      margin-right: 0vw;
+      overflow-x: hidden;
+      aspect-ratio: 10vw;
+      padding-right: 9vw;
+    }
+
+    /* Styling for embeded google doc */
+    .linkeddoc{
+       color: white;
+       font-size: 2.5vw;
+       padding: 4vw 4vw;
+       width: 100%;
+       text-align: left;
+    }
+    /* Hiding/moving an element depending on screen size */
+    .hid{
+      margin-top: -1vw;
+      margin-bottom: -5vw;
+      width: 100%;
+    }
+    /* The embeded diagrams don't play nice on small screens, so it's hidden */
+    @media (max-width: 850px) {
+        .doc {
+          display: none;
+        }
+        .hid {
+          display: none;
+        }
+      }
+   </style>
+</head>
+
+<!--Header contains logo and title-->
+<iframe src="background.html" style="padding-left: 0.05vw; border-color: #00000000;"></iframe>
+<header id="header" class="header">
+    <!--For title of page-->
+    <div>
+        <img class="head-img"src="images/ODSlogo.png" alt="HeaderLogo"/>
+    </div>
+    <div>
+      <h1 style="margin-top: -6vw; padding-bottom: 2.5vw; text-shadow: 2px 3px #0b0b0bbb;">Orbital Dynamic Solutions</h1> 
+    </div>
+</header>
+<!--Header ends here-->
+<!--Body starts here-->
+<body>
+</div> 
+<!--Navigation starts here-->
+<div class="nav" id="nav">
+    <span>
+    <div style="text-align: center;">
+      <nav class="navbar">
+        <div class="hamburger-menu">
+            <p style="margin-left: 3vw; margin-top: -0.3vw;">Menu</p>
+            <div style="margin-top: -3.4vw;">
+              <div class="bar"></div>
+              <div class="bar"></div>
+              <div class="bar"></div>
+            </div>
+        </div>
+      <ul class="nav-links" >
+        <li><a class="non" href="index.html" style="color: white;">Homepage</a> </li>
+        <li><a class="non" href="aboutus.html" style="color: white;">About Us</a> </li>
+        <li><a class="non" href="scope.html" style="color: white;">Project Scope</a> </li>
+        <li><a class="non" href="competition.html" style="color: white;">Competition</a> </li>
+        <li><a class="non" href="diagrams.html" style="color: white;">Diagrams</a> </li>
+        <li><a class="non" href="partners.html" style="color: white;">Partners</a> </li>
+        <li><a class="non" href="contactus.html" style="color: white;">Contact Us</a> </li>
+      </ul>
+    </div>
+    </span>
+</div>
+<!--Js to make nav scroll with page-->
+<!--Js toggle hamburger menu visibility-->
+<script>
+  window.onscroll = function() {myFunction()};
+  
+  var nav = document.getElementById("nav");
+  var sticky = nav.offsetTop;
+  
+  function myFunction() {
+    if (window.pageYOffset > sticky) {
+      nav.classList.add("sticky");
+    } else {
+      nav.classList.remove("sticky");
+    }
+  }
+
+  document.addEventListener('DOMContentLoaded', function() {
+    const hamburgerMenu = document.querySelector('.hamburger-menu');
+    const navLinks = document.querySelector('.nav-links');
+
+    hamburgerMenu.addEventListener('click', function() {
+        navLinks.classList.toggle('active');
+    });
+});
+</script>
+
+<!--Navigation ends here-->
+
+<!--Start of flexboxes to divide webpage-->
+<div class="flexbox" style="text-align: center;">
+    <!-- Gives user freedom to look at the document full of the diagrams -->
+    <h4 style="margin-bottom: -2vw;">You can use the provided link to view the full document.</h4>
+    <a class="linkeddoc" href="https://docs.google.com/document/d/e/2PACX-1vRwPUg8e-YlcgW6biKZSMXF898c00Jo5bhiyBcKDFR9AvyBGPreyJ9Qhqy74JZsqZqIZWZKQvuHZ1NW/pub">Link to References</a>
+    <iframe class="doc hid" src="https://docs.google.com/document/d/e/2PACX-1vRwPUg8e-YlcgW6biKZSMXF898c00Jo5bhiyBcKDFR9AvyBGPreyJ9Qhqy74JZsqZqIZWZKQvuHZ1NW/pub?embedded=true"></iframe>
+</div>
+</body>
+<!--Body ends here-->
+<!--Link to scroll you back to top of page-->
+<div style="text-align: center;">
+<!--Footer that travels with you at the bottom of page-->
+<footer>
+     <!-- Company Logo -->
+    <span style="float: left; margin-left:1vw;">
+        <img  class="footer-img" src="images/ODSlogo.png" alt="HeaderLogo"/>
+    </span>
+    <!-- Links column on the left -->
+    <div>
+        <ul class="footer-links">
+            <li><a href="references.html">References</a></li>
+            <li><a href="contactus.html">Contact Us</a></li>
+            <li><a href="aboutus.html">About Us</a></li>
+        </ul>
+    </div>
+    <!-- Links user back to the top of the page using the header -->
+    <div>
+        <a class="backtop" href="#header">Back to top</a>
+    </div>
+    <!-- Copyright on the right -->
+    <div style="display: flex; align-items: center; justify-content: flex-end;">
+        <span class="copyright">© Vince Vagay | 2025</span>
+    </div>
+</footer>
+
+</html>
